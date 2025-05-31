@@ -1,0 +1,4051 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1E0F30">
+    <meta name="description" content="روایت عشق محمد و یسنا">
+    <title>به دنیای ما خوش آمدی | محمد و یسنا</title>
+    
+    <!-- فونت‌ها و آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
+    <!-- فونت نستعلیق -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/font-store/IranNastaliq@master/WebFonts/fontface.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/gandom-font@v0.5.1/dist/font-face.css" rel="stylesheet" type="text/css" />
+    
+    <!-- کتابخانه‌های انیمیشن -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/MotionPathPlugin.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    
+    <style>
+        /* === سیستم طراحی 2025 === */
+        :root {
+            /* پالت رنگ - نئون درخشان */
+            --primary: #8A2BE2;
+            --primary-light: #B15EFF;
+            --primary-dark: #5D12D2;
+            --secondary: #FF3E78;
+            --secondary-light: #FF6B9E;
+            --secondary-dark: #D91557;
+            --accent: #00F5FF;
+            --accent-light: #80FBFF;
+            --accent-dark: #00C4CC;
+            --neutral-100: #FFFFFF;
+            --neutral-200: #F4F7FF;
+            --neutral-300: #E2E8F0;
+            --neutral-400: #CBD5E1;
+            --neutral-500: #94A3B8;
+            --neutral-600: #64748B;
+            --neutral-700: #334155;
+            --neutral-800: #1E293B;
+            --neutral-900: #0F172A;
+            --neutral-950: #030712;
+            
+            /* گرادیانت‌ها */
+            --gradient-primary: linear-gradient(135deg, var(--primary), var(--primary-light));
+            --gradient-secondary: linear-gradient(135deg, var(--secondary), var(--secondary-light));
+            --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-light));
+            --gradient-mixed: linear-gradient(135deg, var(--primary), var(--secondary));
+            --gradient-cosmic: linear-gradient(135deg, #8A2BE2, #FF3E78, #00F5FF);
+            --gradient-dark: linear-gradient(135deg, #1E0F30, #2D1B4E);
+            --gradient-aurora: linear-gradient(135deg, #5D12D2, #1E0F30, #D91557);
+            
+            /* افکت‌های شیشه‌ای */
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+            --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            --glass-blur: blur(16px);
+            
+            /* سایه‌ها */
+            --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
+            --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
+            --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
+            --shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.25);
+            --shadow-inner: inset 0 2px 6px rgba(0, 0, 0, 0.15);
+            --shadow-glow-primary: 0 0 25px rgba(138, 43, 226, 0.6);
+            --shadow-glow-secondary: 0 0 25px rgba(255, 62, 120, 0.6);
+            --shadow-glow-accent: 0 0 25px rgba(0, 245, 255, 0.6);
+            
+            /* تایپوگرافی */
+            --font-primary: 'Vazirmatn', sans-serif;
+            --font-poem: 'IranNastaliq', 'Sahel', 'Vazirmatn', sans-serif;
+            --font-size-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.875rem);
+            --font-size-sm: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+            --font-size-md: clamp(1rem, 0.9rem + 0.5vw, 1.125rem);
+            --font-size-lg: clamp(1.125rem, 1rem + 0.625vw, 1.25rem);
+            --font-size-xl: clamp(1.25rem, 1.1rem + 0.75vw, 1.5rem);
+            --font-size-2xl: clamp(1.5rem, 1.3rem + 1vw, 1.875rem);
+            --font-size-3xl: clamp(1.875rem, 1.6rem + 1.375vw, 2.25rem);
+            --font-size-4xl: clamp(2.25rem, 1.9rem + 1.75vw, 3rem);
+            --font-size-5xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+            --font-size-6xl: clamp(4rem, 3rem + 3vw, 5rem);
+            
+            /* فاصله‌گذاری */
+            --space-1: clamp(0.25rem, 0.2rem + 0.25vw, 0.5rem);
+            --space-2: clamp(0.5rem, 0.4rem + 0.5vw, 0.75rem);
+            --space-3: clamp(0.75rem, 0.6rem + 0.75vw, 1rem);
+            --space-4: clamp(1rem, 0.8rem + 1vw, 1.5rem);
+            --space-5: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+            --space-6: clamp(2rem, 1.6rem + 2vw, 3rem);
+            --space-7: clamp(3rem, 2.4rem + 3vw, 4rem);
+            --space-8: clamp(4rem, 3.2rem + 4vw, 6rem);
+            --space-9: clamp(6rem, 4.8rem + 6vw, 8rem);
+            
+            /* شعاع گوشه‌ها */
+            --radius-sm: 0.5rem;
+            --radius-md: 1rem;
+            --radius-lg: 1.5rem;
+            --radius-xl: 2rem;
+            --radius-2xl: 3rem;
+            --radius-full: 9999px;
+            
+            /* انتقال‌ها */
+            --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+            
+            /* لایه‌های z-index */
+            --z-behind: -1;
+            --z-normal: 1;
+            --z-above: 10;
+            --z-floating: 100;
+            --z-modal: 1000;
+            
+            /* ویوپورت */
+            --vh: 1vh;
+        }
+        
+        /* تنظیمات پایه */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: var(--space-6);
+            height: 100%;
+            font-size: 16px;
+        }
+        
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--neutral-950);
+            color: var(--neutral-100);
+            line-height: 1.6;
+            min-height: 100vh;
+            min-height: calc(var(--vh, 1vh) * 100);
+            overflow-x: hidden;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        /* افکت‌های پس‌زمینه */
+        .bg-stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                radial-gradient(1px 1px at 25% 15%, var(--neutral-300), transparent),
+                radial-gradient(1px 1px at 50% 50%, var(--neutral-400), transparent),
+                radial-gradient(2px 2px at 75% 75%, var(--neutral-300), transparent),
+                radial-gradient(2px 2px at 20% 60%, var(--neutral-400), transparent),
+                radial-gradient(1px 1px at 90% 30%, var(--neutral-300), transparent);
+            background-size: 550px 550px;
+            z-index: var(--z-behind);
+            opacity: 0.15;
+            pointer-events: none;
+        }
+        
+        .bg-gradient {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(ellipse at top, rgba(138, 43, 226, 0.15), transparent 60%),
+                        radial-gradient(ellipse at bottom, rgba(255, 62, 120, 0.1), transparent 60%);
+            z-index: var(--z-behind);
+            pointer-events: none;
+        }
+        
+        .bg-grid {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 50px 50px;
+            z-index: var(--z-behind);
+            pointer-events: none;
+        }
+        
+        .bg-noise {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIzMDAiIGhlaWdodD0iMzAwIj48ZmlsdGVyIGlkPSJhIiB4PSIwIiB5PSIwIj48ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9Ii43NSIgc3RpdGNoVGlsZXM9InN0aXRjaCIgdHlwZT0iZnJhY3RhbE5vaXNlIi8+PGZlQ29sb3JNYXRyaXggdHlwZT0ic2F0dXJhdGUiIHZhbHVlcz0iMCIvPjwvZmlsdGVyPjxwYXRoIGQ9Ik0wIDBoMzAwdjMwMEgweiIgZmlsdGVyPSJ1cmwoI2EpIiBvcGFjaXR5PSIuMDUiLz48L3N2Zz4=');
+            z-index: var(--z-behind);
+            pointer-events: none;
+            opacity: 0.4;
+        }
+        
+        /* تایپوگرافی */
+        h1, h2, h3, h4, h5, h6, p {
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        /* کانتینر */
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 var(--space-4);
+        }
+        
+        /* استایل بخش‌ها */
+        .section {
+            padding: var(--space-9) 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        /* === بخش هدر === */
+        .hero {
+            min-height: 100vh;
+            min-height: calc(var(--vh, 1vh) * 100);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding: var(--space-6) 0;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxkZWZzPjxwYXR0ZXJuIGlkPSJwYXR0ZXJuIiB4PSIwIiB5PSIwIiB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHBhdHRlcm5Vbml0cz0idXNlclNwYWNlT25Vc2UiIHBhdHRlcm5UcmFuc2Zvcm09InJvdGF0ZSg0NSkiPjxjaXJjbGUgcj0iMS41IiBjeD0iMjAiIGN5PSIyMCIgZmlsbD0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjAzKSI+PC9jaXJjbGU+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI3BhdHRlcm4pIj48L3JlY3Q+PC9zdmc+');
+            z-index: var(--z-behind);
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            text-align: center;
+            position: relative;
+            z-index: var(--z-normal);
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .couple-profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: var(--space-5);
+            margin-bottom: var(--space-7);
+            position: relative;
+        }
+        
+        .profile-container {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            transform-style: preserve-3d;
+            transition: transform var(--transition-slow);
+        }
+        
+        .profile-img {
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-full);
+            object-fit: cover;
+            border: 3px solid var(--glass-border);
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-normal);
+            filter: brightness(1.05) contrast(1.05);
+        }
+        
+        .profile-img:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-glow-primary);
+        }
+        
+        .profile-glow {
+            position: absolute;
+            top: -10px;
+            left: -10px;
+            right: -10px;
+            bottom: -10px;
+            border-radius: var(--radius-full);
+            z-index: var(--z-behind);
+            animation: profile-pulse 4s infinite alternate ease-in-out;
+        }
+        
+        .profile-glow-him {
+            background: radial-gradient(circle, rgba(138, 43, 226, 0.6) 0%, transparent 70%);
+        }
+        
+        .profile-glow-her {
+            background: radial-gradient(circle, rgba(255, 62, 120, 0.6) 0%, transparent 70%);
+        }
+        
+        .heart-connector {
+            position: relative;
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: var(--font-size-4xl);
+            animation: heart-beat 1.5s infinite;
+            filter: drop-shadow(0 0 10px rgba(255, 62, 120, 0.5));
+        }
+        
+        .couple-title {
+            font-size: var(--font-size-6xl);
+            font-weight: 800;
+            margin-bottom: var(--space-5);
+            background: var(--gradient-cosmic);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            display: inline-block;
+            text-shadow: 0 0 30px rgba(138, 43, 226, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .couple-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            height: 3px;
+            background: var(--gradient-cosmic);
+            border-radius: var(--radius-full);
+        }
+        
+        .couple-subtitle {
+            font-size: var(--font-size-xl);
+            font-weight: 300;
+            color: var(--neutral-300);
+            margin-bottom: var(--space-6);
+            opacity: 0.9;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .anniversary-counter {
+            font-size: var(--font-size-2xl);
+            margin-top: var(--space-6);
+            color: var(--neutral-200);
+            position: relative;
+            padding: var(--space-5);
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .days-count {
+            font-weight: 700;
+            color: var(--secondary);
+            position: relative;
+            display: inline-block;
+            font-size: var(--font-size-3xl);
+        }
+        
+        .days-count::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--secondary);
+            border-radius: var(--radius-full);
+        }
+        
+        .scroll-indicator {
+            position: absolute;
+            bottom: var(--space-5);
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-2);
+            opacity: 0.8;
+            cursor: pointer;
+            transition: opacity var(--transition-fast);
+        }
+        
+        .scroll-indicator:hover {
+            opacity: 1;
+        }
+        
+        .scroll-indicator span {
+            font-size: var(--font-size-sm);
+            color: var(--neutral-300);
+        }
+        
+        .scroll-arrow {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--neutral-300);
+            border-radius: var(--radius-full);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: bounce 2s infinite;
+        }
+        
+        .scroll-arrow i {
+            color: var(--neutral-300);
+            font-size: var(--font-size-lg);
+        }
+        
+        /* === بخش گالری === */
+        .gallery-section {
+            position: relative;
+        }
+        
+        .section-title {
+            font-size: var(--font-size-4xl);
+            font-weight: 700;
+            margin-bottom: var(--space-7);
+            text-align: center;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title.primary {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .section-title.secondary {
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .section-title.accent {
+            background: var(--gradient-accent);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            border-radius: var(--radius-full);
+        }
+        
+        .section-title.primary::after {
+            background: var(--gradient-primary);
+        }
+        
+        .section-title.secondary::after {
+            background: var(--gradient-secondary);
+        }
+        
+        .section-title.accent::after {
+            background: var(--gradient-accent);
+        }
+        
+        /* گالری اسلایدر */
+        .gallery-slider-container {
+            position: relative;
+            width: 100%;
+            margin-bottom: var(--space-6);
+        }
+        
+        .swiper {
+            width: 100%;
+            padding-bottom: var(--space-6);
+        }
+        
+        .swiper-slide {
+            width: 300px;
+            height: 400px;
+            position: relative;
+            transition: all var(--transition-normal);
+            transform: scale(0.9);
+            opacity: 0.7;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+        }
+        
+        .swiper-slide-active {
+            transform: scale(1);
+            opacity: 1;
+        }
+        
+        .memory-card {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-lg);
+            cursor: pointer;
+        }
+        
+        .memory-front {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-dark);
+            border: 1px solid var(--glass-border);
+            transition: all var(--transition-normal);
+            z-index: 1;
+        }
+        
+        .memory-front img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: all var(--transition-normal);
+            filter: brightness(1.05) saturate(1.1);
+        }
+        
+        .memory-card:hover .memory-front img {
+            transform: scale(1.1);
+            filter: brightness(1.1) saturate(1.2) hue-rotate(5deg);
+        }
+        
+        .memory-back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-aurora);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: var(--space-5);
+            text-align: center;
+            box-shadow: var(--shadow-xl);
+            z-index: 2;
+            opacity: 0;
+            transition: all var(--transition-normal);
+            transform: translateY(100%);
+        }
+        
+        .memory-card:hover .memory-back {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .memory-back h3 {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--space-4);
+            color: var(--neutral-100);
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .memory-back p {
+            font-size: var(--font-size-lg);
+            color: var(--neutral-200);
+            line-height: 1.8;
+        }
+        
+        .memory-date {
+            position: absolute;
+            top: var(--space-3);
+            right: var(--space-3);
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-sm);
+            color: var(--neutral-100);
+            z-index: 2;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .memory-icon {
+            position: absolute;
+            bottom: var(--space-3);
+            left: var(--space-3);
+            color: var(--neutral-100);
+            font-size: var(--font-size-xl);
+            z-index: 2;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+        }
+        
+        .swiper-pagination-bullet {
+            width: 12px;
+            height: 12px;
+            background: var(--glass-bg);
+            border: 1px solid var(--glass-border);
+            opacity: 0.7;
+        }
+        
+        .swiper-pagination-bullet-active {
+            background: var(--primary);
+            opacity: 1;
+            box-shadow: 0 0 10px var(--primary-light);
+        }
+        
+        /* === بخش تایم‌لاین === */
+        .timeline-section {
+            position: relative;
+        }
+        
+        .timeline-container {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: var(--space-4) 0;
+        }
+        
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--primary), var(--primary-light));
+            z-index: 1;
+            border-radius: var(--radius-full);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+        }
+        
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-7);
+            width: 100%;
+        }
+        
+        .timeline-content {
+            position: relative;
+            width: calc(50% - var(--space-5));
+            padding: var(--space-5);
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+            z-index: 2;
+            transition: all var(--transition-normal);
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-xl), 0 0 20px rgba(138, 43, 226, 0.3);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            float: left;
+            text-align: right;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content {
+            float: right;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            display: block;
+            clear: both;
+            height: 0;
+            visibility: hidden;
+        }
+        
+        .timeline-dot {
+            position: absolute;
+            top: var(--space-5);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 24px;
+            border-radius: var(--radius-full);
+            background: var(--primary);
+            box-shadow: var(--shadow-glow-primary), 0 0 0 5px rgba(138, 43, 226, 0.2);
+            z-index: 3;
+            transition: all var(--transition-normal);
+        }
+        
+        .timeline-item:hover .timeline-dot {
+            transform: translateX(-50%) scale(1.2);
+            box-shadow: var(--shadow-glow-primary), 0 0 0 8px rgba(138, 43, 226, 0.3);
+        }
+        
+        .timeline-date {
+            position: absolute;
+            top: var(--space-5);
+            color: var(--neutral-200);
+            font-size: var(--font-size-md);
+            font-weight: 500;
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            padding: var(--space-2) var(--space-3);
+            border-radius: var(--radius-md);
+            border: 1px solid var(--glass-border);
+            box-shadow: var(--shadow-md);
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-date {
+            right: calc(50% + var(--space-6));
+        }
+        
+        .timeline-item:nth-child(even) .timeline-date {
+            left: calc(50% + var(--space-6));
+        }
+        
+        .timeline-title {
+            font-size: var(--font-size-2xl);
+            margin-bottom: var(--space-3);
+            color: var(--primary-light);
+            font-weight: 600;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .timeline-text {
+            font-size: var(--font-size-lg);
+            color: var(--neutral-200);
+            line-height: 1.8;
+        }
+        
+        .timeline-icon {
+            position: absolute;
+            font-size: var(--font-size-2xl);
+            color: var(--accent);
+            filter: drop-shadow(0 0 5px rgba(0, 245, 255, 0.5));
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-icon {
+            left: var(--space-4);
+            bottom: var(--space-4);
+        }
+        
+        .timeline-item:nth-child(even) .timeline-icon {
+            right: var(--space-4);
+            bottom: var(--space-4);
+        }
+        
+        /* === بخش شعر === */
+        .poem-section {
+            position: relative;
+        }
+        
+        .poem-container {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+        
+        .poem-card {
+            position: relative;
+            padding: var(--space-7);
+            background: var(--gradient-dark);
+            border-radius: var(--radius-xl);
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+            transform-style: preserve-3d;
+            perspective: 1000px;
+        }
+        
+        .poem-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            z-index: 0;
+            opacity: 0.7;
+            transform: rotate(30deg);
+            pointer-events: none;
+            animation: poem-glow 15s infinite linear;
+        }
+        
+        @keyframes poem-glow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        
+        .poem-text {
+            position: relative;
+            z-index: 1;
+            font-family: var(--font-poem);
+            font-size: var(--font-size-xl);
+            line-height: 2.5;
+            text-align: center;
+            margin-bottom: var(--space-6);
+            color: var(--neutral-200);
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        
+        .poem-author {
+            position: relative;
+            z-index: 1;
+            font-size: var(--font-size-lg);
+            color: var(--secondary);
+            text-align: left;
+            font-style: italic;
+            font-weight: 500;
+            margin-top: var(--space-5);
+            padding-top: var(--space-4);
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .poem-icon {
+            position: absolute;
+            top: var(--space-5);
+            right: var(--space-5);
+            font-size: var(--font-size-3xl);
+            color: var(--primary-light);
+            opacity: 0.5;
+            transform: rotate(10deg);
+        }
+        
+        /* === دکمه‌های تعاملی === */
+        .buttons-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--space-5);
+            margin: var(--space-8) 0;
+        }
+        
+        .btn {
+            position: relative;
+            padding: var(--space-4) var(--space-6);
+            min-width: 220px;
+            background: transparent;
+            color: var(--neutral-100);
+            font-size: var(--font-size-lg);
+            font-weight: 600;
+            border: none;
+            border-radius: var(--radius-full);
+            cursor: pointer;
+            overflow: hidden;
+            z-index: 1;
+            transition: all var(--transition-normal);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: var(--space-3);
+            letter-spacing: 0.5px;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            z-index: -2;
+        }
+        
+        .btn::after {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            right: 2px;
+            bottom: 2px;
+            background: var(--neutral-900);
+            border-radius: calc(var(--radius-full) - 2px);
+            z-index: -1;
+            transition: opacity var(--transition-fast);
+        }
+        
+        .btn:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-glow-primary);
+        }
+        
+        .btn:hover::after {
+            opacity: 0.8;
+        }
+        
+        .btn:active {
+            transform: translateY(-2px);
+        }
+        
+        .btn.secondary::before {
+            background: var(--gradient-secondary);
+        }
+        
+        .btn.secondary:hover {
+            box-shadow: var(--shadow-glow-secondary);
+        }
+        
+        .btn.accent::before {
+            background: var(--gradient-accent);
+        }
+        
+        .btn.accent:hover {
+            box-shadow: var(--shadow-glow-accent);
+        }
+        
+        .btn i {
+            font-size: 1.2em;
+        }
+        
+        /* === مدال‌ها === */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            background: rgba(3, 7, 18, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: var(--z-modal);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition-normal);
+            padding: var(--space-4);
+        }
+        
+        .modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 650px;
+            background: var(--gradient-dark);
+            border-radius: var(--radius-xl);
+            padding: var(--space-7);
+            box-shadow: var(--shadow-xl);
+            transform: scale(0.9) translateY(30px);
+            transition: transform var(--transition-bounce);
+            overflow: hidden;
+            border: 1px solid var(--glass-border);
+        }
+        
+        .modal-overlay.active .modal-content {
+            transform: scale(1) translateY(0);
+        }
+        
+        .modal-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at top right, rgba(138, 43, 226, 0.15), transparent 60%),
+                        radial-gradient(circle at bottom left, rgba(255, 62, 120, 0.1), transparent 60%);
+            z-index: 0;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: var(--space-4);
+            right: var(--space-4);
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius-full);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: var(--neutral-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            z-index: 2;
+            font-size: var(--font-size-lg);
+        }
+        
+        .modal-close:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: rotate(90deg);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        .modal-title {
+            font-size: var(--font-size-3xl);
+            margin-bottom: var(--space-5);
+            background: var(--gradient-secondary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+            text-align: center;
+        }
+        
+        .modal-text {
+            font-size: var(--font-size-lg);
+            line-height: 2;
+            margin-bottom: var(--space-6);
+            color: var(--neutral-200);
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        .modal-image {
+            width: 180px;
+            height: 180px;
+            border-radius: var(--radius-full);
+            object-fit: cover;
+            margin: var(--space-5) auto;
+            display: block;
+            border: 3px solid var(--primary);
+            box-shadow: var(--shadow-glow-primary);
+            position: relative;
+            z-index: 1;
+            transition: all var(--transition-normal);
+        }
+        
+        .modal-image:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-glow-secondary);
+            border-color: var(--secondary);
+        }
+        
+        .modal-signature {
+            font-style: italic;
+            text-align: right;
+            margin-top: var(--space-5);
+            color: var(--secondary);
+            position: relative;
+            z-index: 1;
+            font-size: var(--font-size-lg);
+            line-height: 1.8;
+        }
+        
+        /* مدال گالری */
+        .gallery-modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            height: calc(var(--vh, 1vh) * 100);
+            background: rgba(3, 7, 18, 0.98);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: var(--z-modal);
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity var(--transition-normal);
+        }
+        
+        .gallery-modal-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .gallery-modal-content {
+            position: relative;
+            width: 95%;
+            max-width: 1200px;
+            height: 85vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .gallery-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: var(--space-4);
+        }
+        
+        .gallery-modal-title {
+            font-size: var(--font-size-2xl);
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-weight: 700;
+        }
+        
+        .gallery-modal-body {
+            flex: 1;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .gallery-image-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .gallery-image {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-xl);
+            transition: all var(--transition-normal);
+        }
+        
+        .gallery-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-full);
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--neutral-100);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all var(--transition-fast);
+            z-index: 2;
+            font-size: var(--font-size-xl);
+        }
+        
+        .gallery-nav:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-50%) scale(1.1);
+            box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+        }
+        
+        .gallery-prev {
+            left: var(--space-5);
+        }
+        
+        .gallery-next {
+            right: var(--space-5);
+        }
+        
+        .gallery-counter {
+            position: absolute;
+            bottom: var(--space-5);
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            padding: var(--space-2) var(--space-4);
+            border-radius: var(--radius-full);
+            font-size: var(--font-size-md);
+            color: var(--neutral-100);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .gallery-thumbnails {
+            display: flex;
+            justify-content: center;
+            gap: var(--space-3);
+            padding: var(--space-4);
+            overflow-x: auto;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary) rgba(255, 255, 255, 0.1);
+        }
+        
+        .gallery-thumbnails::-webkit-scrollbar {
+            height: 6px;
+        }
+        
+        .gallery-thumbnails::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-full);
+        }
+        
+        .gallery-thumbnails::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: var(--radius-full);
+        }
+        
+        .gallery-thumbnail {
+            width: 80px;
+            height: 80px;
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.6;
+            transition: all var(--transition-fast);
+            flex-shrink: 0;
+            border: 2px solid transparent;
+        }
+        
+        .gallery-thumbnail.active {
+            opacity: 1;
+            border-color: var(--primary);
+            box-shadow: 0 0 15px rgba(138, 43, 226, 0.5);
+        }
+        
+        .gallery-thumbnail:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
+        }
+        
+        .gallery-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        /* === پخش‌کننده صوتی === */
+        .audio-player {
+            position: fixed;
+            bottom: var(--space-5);
+            right: var(--space-5);
+            width: 60px;
+            height: 60px;
+            border-radius: var(--radius-full);
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-lg);
+            transition: all var(--transition-normal);
+            z-index: var(--z-floating);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            overflow: hidden;
+        }
+        
+        .audio-player:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow-glow-primary);
+        }
+        
+        .audio-player.expanded {
+            width: 280px;
+            border-radius: var(--radius-xl);
+        }
+        
+        .audio-player-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 var(--space-4);
+            opacity: 0;
+            transition: opacity var(--transition-normal);
+            pointer-events: none;
+        }
+        
+        .audio-player.expanded .audio-player-inner {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .audio-controls {
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        
+        .audio-info {
+            color: var(--neutral-100);
+            font-size: var(--font-size-sm);
+            text-align: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            max-width: 150px;
+        }
+        
+        .audio-player i {
+            color: var(--neutral-100);
+            font-size: 24px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+        
+        #audio-icon {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: opacity var(--transition-normal);
+        }
+        
+        .audio-player.expanded #audio-icon {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .audio-controls i {
+            cursor: pointer;
+            transition: transform var(--transition-fast);
+        }
+        
+        .audio-controls i:hover {
+            transform: scale(1.2);
+        }
+        
+        /* === تغییر تم === */
+        .theme-toggle {
+            position: fixed;
+            top: var(--space-5);
+            right: var(--space-5);
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-full);
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            z-index: var(--z-floating);
+        }
+        
+        .theme-toggle:hover {
+            transform: rotate(45deg);
+            box-shadow: var(--shadow-glow-accent);
+        }
+        
+        .theme-toggle i {
+            color: var(--neutral-100);
+            font-size: 20px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+        
+        /* === فوتر === */
+        .footer {
+            text-align: center;
+            padding: var(--space-7) 0 var(--space-5);
+            position: relative;
+        }
+        
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+        }
+        
+        .footer-text {
+            color: var(--neutral-400);
+            font-size: var(--font-size-md);
+        }
+        
+        .footer-heart {
+            color: var(--secondary);
+            display: inline-block;
+            animation: heart-beat 1.5s infinite;
+            filter: drop-shadow(0 0 5px rgba(255, 62, 120, 0.5));
+        }
+        
+        /* === انیمیشن‌ها === */
+        @keyframes heart-beat {
+            0% { transform: scale(1); }
+            25% { transform: scale(1.1); }
+            40% { transform: scale(1); }
+            60% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        @keyframes profile-pulse {
+            0% { opacity: 0.4; }
+            50% { opacity: 0.7; }
+            100% { opacity: 0.4; }
+        }
+        
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+            40% { transform: translateY(-12px); }
+            60% { transform: translateY(-6px); }
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        
+        @keyframes rotate-3d {
+            0% { transform: rotateY(0deg); }
+            100% { transform: rotateY(360deg); }
+        }
+        
+        /* === طراحی واکنش‌گرا === */
+        @media (max-width: 992px) {
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                gap: var(--space-5);
+            }
+            
+            .timeline-container::before {
+                left: 30px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 60px);
+                float: right !important;
+                text-align: left !important;
+            }
+            
+            .timeline-dot {
+                left: 30px !important;
+            }
+            
+            .timeline-date {
+                position: relative;
+                top: 0;
+                left: 0 !important;
+                right: auto !important;
+                margin-bottom: var(--space-3);
+                display: inline-block;
+                transform: none;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: auto;
+                right: var(--space-4);
+                bottom: var(--space-4);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            :root {
+                --font-size-6xl: clamp(3rem, 2.5rem + 2.5vw, 4rem);
+            }
+            
+            .couple-profile {
+                gap: var(--space-4);
+            }
+            
+            .profile-container {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .heart-connector {
+                width: 60px;
+                height: 60px;
+                font-size: var(--font-size-3xl);
+            }
+            
+            .anniversary-counter {
+                font-size: var(--font-size-xl);
+                padding: var(--space-4);
+            }
+            
+            .days-count {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .buttons-container {
+                flex-direction: column;
+                align-items: center;
+                gap: var(--space-4);
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .gallery-nav {
+                width: 50px;
+                height: 50px;
+                font-size: var(--font-size-lg);
+            }
+            
+            .gallery-prev {
+                left: var(--space-3);
+            }
+            
+            .gallery-next {
+                right: var(--space-3);
+            }
+            
+            .gallery-thumbnail {
+                width: 60px;
+                height: 60px;
+            }
+            
+            .poem-text {
+                font-size: var(--font-size-lg);
+                line-height: 2.2;
+            }
+            
+            .poem-card {
+                padding: var(--space-5);
+            }
+            
+            .modal-content {
+                padding: var(--space-5);
+            }
+            
+            .modal-title {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .modal-text {
+                font-size: var(--font-size-md);
+            }
+            
+            .modal-image {
+                width: 150px;
+                height: 150px;
+            }
+            
+            .audio-player.expanded {
+                width: 250px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .profile-container {
+                width: 90px;
+                height: 90px;
+            }
+            
+            .heart-connector {
+                width: 50px;
+                height: 50px;
+                font-size: var(--font-size-2xl);
+            }
+            
+            .couple-title {
+                font-size: var(--font-size-4xl);
+            }
+            
+            .couple-subtitle {
+                font-size: var(--font-size-md);
+            }
+            
+            .section-title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .audio-player, .theme-toggle {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .audio-player i, .theme-toggle i {
+                font-size: 18px;
+            }
+            
+            .timeline-title {
+                font-size: var(--font-size-xl);
+            }
+            
+            .timeline-text {
+                font-size: var(--font-size-md);
+            }
+            
+            .modal-image {
+                width: 120px;
+                height: 120px;
+            }
+            
+            .audio-player.expanded {
+                width: 220px;
+            }
+            
+            .audio-info {
+                max-width: 100px;
+            }
+        }
+        
+        /* === پشتیبانی از دستگاه‌های لمسی === */
+        @media (hover: none) and (pointer: coarse) {
+            .memory-card-inner {
+                transition: transform 0.3s ease;
+            }
+            
+            .memory-card.flipped .memory-card-inner {
+                transform: rotateY(180deg);
+            }
+        }
+        
+        /* === حالت روشن (لایت تم) === */
+        body.light-theme {
+            background-color: var(--neutral-200);
+            color: var(--neutral-900);
+        }
+        
+        body.light-theme .bg-gradient {
+            background: radial-gradient(ellipse at top, rgba(138, 43, 226, 0.1), transparent 60%),
+                        radial-gradient(ellipse at bottom, rgba(255, 62, 120, 0.05), transparent 60%);
+        }
+        
+        body.light-theme .bg-grid {
+            background-image: 
+                linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
+        }
+        
+        body.light-theme .couple-subtitle {
+            color: var(--neutral-700);
+        }
+        
+        body.light-theme .anniversary-counter {
+            background: rgba(255, 255, 255, 0.7);
+            color: var(--neutral-800);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        body.light-theme .scroll-indicator span,
+        body.light-theme .scroll-arrow i {
+            color: var(--neutral-700);
+        }
+        
+        body.light-theme .scroll-arrow {
+            border-color: var(--neutral-700);
+        }
+        
+        body.light-theme .memory-front {
+            background: var(--neutral-100);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        body.light-theme .timeline-content,
+        body.light-theme .poem-card {
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: var(--shadow-sm);
+        }
+        
+        body.light-theme .timeline-text,
+        body.light-theme .poem-text {
+            color: var(--neutral-800);
+        }
+        
+        body.light-theme .timeline-date {
+            background: rgba(255, 255, 255, 0.9);
+            color: var(--neutral-800);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        body.light-theme .modal-overlay {
+            background: rgba(244, 247, 255, 0.95);
+        }
+        
+        body.light-theme .modal-content {
+            background: linear-gradient(135deg, #f8f9fa, #e2e8f0);
+        }
+        
+        body.light-theme .modal-text {
+            color: var(--neutral-800);
+        }
+        
+        body.light-theme .modal-close {
+            background: rgba(0, 0, 0, 0.1);
+            color: var(--neutral-800);
+        }
+        
+        body.light-theme .theme-toggle {
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        body.light-theme .theme-toggle i {
+            color: var(--neutral-800);
+        }
+        
+        body.light-theme .footer-text {
+            color: var(--neutral-600);
+        }
+        
+        /* === دکمه تنظیمات === */
+        .settings-toggle {
+            position: fixed;
+            top: var(--space-5);
+            left: var(--space-5);
+            width: 50px;
+            height: 50px;
+            border-radius: var(--radius-full);
+            background: var(--glass-bg);
+            backdrop-filter: var(--glass-blur);
+            -webkit-backdrop-filter: var(--glass-blur);
+            border: 1px solid var(--glass-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: var(--shadow-md);
+            transition: all var(--transition-normal);
+            z-index: var(--z-floating);
+        }
+        
+        .settings-toggle:hover {
+            transform: rotate(90deg);
+            box-shadow: var(--shadow-glow-primary);
+        }
+        
+        .settings-toggle i {
+            color: var(--neutral-100);
+            font-size: 20px;
+            filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+        }
+        
+        /* تنظیمات مدال */
+        .settings-section {
+            margin-top: var(--space-5);
+            padding: var(--space-4);
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: var(--radius-lg);
+            border: 1px solid var(--glass-border);
+        }
+        
+        .settings-section h3 {
+            margin-bottom: var(--space-4);
+            color: var(--primary-light);
+            font-size: var(--font-size-lg);
+        }
+        
+        .date-inputs {
+            display: flex;
+            gap: var(--space-3);
+            margin-bottom: var(--space-4);
+        }
+        
+        .input-group {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        
+        .input-group label {
+            margin-bottom: var(--space-2);
+            color: var(--neutral-300);
+            font-size: var(--font-size-sm);
+        }
+        
+        .date-input {
+            padding: var(--space-3);
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid var(--glass-border);
+            border-radius: var(--radius-md);
+            color: var(--neutral-100);
+            font-family: var(--font-primary);
+            font-size: var(--font-size-md);
+            transition: all var(--transition-fast);
+            text-align: center;
+        }
+        
+        .date-input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 10px rgba(138, 43, 226, 0.4);
+        }
+        
+        body.light-theme .date-input {
+            background: rgba(0, 0, 0, 0.05);
+            color: var(--neutral-800);
+        }
+        
+        body.light-theme .settings-toggle {
+            background: rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+        }
+        
+        body.light-theme .settings-toggle i {
+            color: var(--neutral-800);
+        }
+
+        /* پیام موفقیت */
+        .success-message {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: rgba(46, 213, 115, 0.9);
+            color: white;
+            padding: var(--space-3) var(--space-5);
+            border-radius: var(--radius-md);
+            font-size: var(--font-size-md);
+            box-shadow: var(--shadow-lg);
+            z-index: var(--z-floating);
+            display: flex;
+            align-items: center;
+            gap: var(--space-3);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+
+        .success-message.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        .success-message i {
+            font-size: var(--font-size-xl);
+        }
+
+        /* === بهبود ریسپانسیو برای دستگاه‌های کوچک‌تر === */
+        @media (max-width: 480px) {
+            /* کاهش اندازه عناصر در صفحه اصلی */
+            .profile-container {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .heart-connector {
+                width: 40px;
+                height: 40px;
+                font-size: var(--font-size-xl);
+            }
+            
+            .couple-title {
+                font-size: var(--font-size-3xl);
+            }
+            
+            .couple-subtitle {
+                font-size: var(--font-size-sm);
+            }
+            
+            .anniversary-counter {
+                font-size: var(--font-size-md);
+                padding: var(--space-3);
+            }
+            
+            .days-count {
+                font-size: var(--font-size-xl);
+            }
+            
+            /* تایم‌لاین در موبایل */
+            .timeline-container::before {
+                left: 20px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 40px);
+                padding: var(--space-3);
+            }
+            
+            .timeline-dot {
+                left: 20px !important;
+                width: 16px;
+                height: 16px;
+            }
+            
+            .timeline-title {
+                font-size: var(--font-size-lg);
+            }
+            
+            .timeline-text {
+                font-size: var(--font-size-sm);
+            }
+            
+            /* گالری در موبایل */
+            .swiper-slide {
+                width: 250px;
+                height: 350px;
+            }
+            
+            .memory-back h3 {
+                font-size: var(--font-size-xl);
+            }
+            
+            .memory-back p {
+                font-size: var(--font-size-md);
+            }
+            
+            /* بخش شعر */
+            .poem-text {
+                font-size: var(--font-size-md);
+                line-height: 2;
+            }
+            
+            .poem-card {
+                padding: var(--space-4);
+            }
+            
+            /* مدال‌ها */
+            .modal-content {
+                padding: var(--space-4);
+            }
+            
+            .modal-title {
+                font-size: var(--font-size-xl);
+                margin-bottom: var(--space-3);
+            }
+            
+            .modal-text {
+                font-size: var(--font-size-sm);
+            }
+            
+            .modal-image {
+                width: 100px;
+                height: 100px;
+            }
+            
+            /* دکمه‌های شناور */
+            .audio-player, .theme-toggle, .settings-toggle {
+                width: 40px;
+                height: 40px;
+            }
+            
+            .audio-player i, .theme-toggle i, .settings-toggle i {
+                font-size: 16px;
+            }
+            
+            .audio-player.expanded {
+                width: 200px;
+            }
+            
+            .audio-info {
+                max-width: 80px;
+                font-size: var(--font-size-xs);
+            }
+            
+            /* گالری مدال */
+            .gallery-nav {
+                width: 40px;
+                height: 40px;
+                font-size: var(--font-size-md);
+            }
+            
+            .gallery-prev {
+                left: var(--space-2);
+            }
+            
+            .gallery-next {
+                right: var(--space-2);
+            }
+            
+            .gallery-thumbnail {
+                width: 50px;
+                height: 50px;
+            }
+            
+            /* تنظیمات */
+            .date-inputs {
+                flex-direction: column;
+                gap: var(--space-2);
+            }
+            
+            .input-group {
+                width: 100%;
+            }
+            
+            /* فاصله‌گذاری بخش‌ها */
+            .section {
+                padding: var(--space-7) 0;
+            }
+            
+            .section-title {
+                font-size: var(--font-size-2xl);
+                margin-bottom: var(--space-5);
+            }
+        }
+
+        /* بهینه‌سازی برای دستگاه‌های بسیار کوچک */
+        @media (max-width: 360px) {
+            .profile-container {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .heart-connector {
+                width: 35px;
+                height: 35px;
+                font-size: var(--font-size-lg);
+            }
+            
+            .couple-title {
+                font-size: var(--font-size-2xl);
+            }
+            
+            .couple-subtitle {
+                font-size: var(--font-size-xs);
+            }
+            
+            .days-count {
+                font-size: var(--font-size-lg);
+            }
+            
+            .audio-player.expanded {
+                width: 180px;
+            }
+            
+            .audio-info {
+                max-width: 60px;
+            }
+            
+            .swiper-slide {
+                width: 220px;
+                height: 300px;
+            }
+        }
+
+        /* بهینه‌سازی برای دستگاه‌های با ارتفاع کم */
+        @media (max-height: 700px) {
+            .hero {
+                padding: var(--space-4) 0;
+            }
+            
+            .couple-profile {
+                margin-bottom: var(--space-4);
+            }
+            
+            .anniversary-counter {
+                margin-top: var(--space-4);
+            }
+            
+            .scroll-indicator {
+                bottom: var(--space-3);
+            }
+        }
+
+        /* بهینه‌سازی برای حالت افقی در موبایل */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .hero {
+                padding: var(--space-3) 0;
+            }
+            
+            .couple-profile {
+                margin-bottom: var(--space-3);
+            }
+            
+            .profile-container {
+                width: 70px;
+                height: 70px;
+            }
+            
+            .heart-connector {
+                width: 35px;
+                height: 35px;
+            }
+            
+            .couple-title {
+                font-size: var(--font-size-3xl);
+                margin-bottom: var(--space-2);
+            }
+            
+            .couple-subtitle {
+                margin-bottom: var(--space-3);
+            }
+            
+            .anniversary-counter {
+                padding: var(--space-2);
+                margin-top: var(--space-3);
+            }
+            
+            .scroll-indicator {
+                display: none;
+            }
+        }
+
+        /* === بهبود ریسپانسیو برای بخش داستان عشق ما (تایم‌لاین) === */
+        @media (max-width: 768px) {
+            .timeline-container::before {
+                left: 30px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                float: right;
+                text-align: left;
+                margin-left: 60px;
+                width: calc(100% - 80px);
+            }
+            
+            .timeline-dot {
+                left: 30px !important;
+                transform: translateX(0) !important;
+            }
+            
+            .timeline-date {
+                position: relative;
+                top: 0;
+                left: 0 !important;
+                right: auto !important;
+                margin-bottom: var(--space-3);
+                display: inline-block;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-icon,
+            .timeline-item:nth-child(even) .timeline-icon {
+                left: auto;
+                right: var(--space-4);
+                bottom: var(--space-4);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .timeline-container::before {
+                left: 20px;
+            }
+            
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 40px;
+                width: calc(100% - 60px);
+                padding: var(--space-3);
+            }
+            
+            .timeline-dot {
+                left: 20px !important;
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        /* اطمینان از نمایش صحیح تایم‌لاین */
+        .timeline-section {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .timeline-container {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            overflow: hidden; /* برای رفع مشکل float */
+        }
+
+        .timeline-item {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+            margin-bottom: var(--space-6);
+            position: relative;
+            clear: both;
+        }
+
+        .timeline-content {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .timeline-dot {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+
+        .section-title.secondary {
+            display: block !important;
+            visibility: visible !important;
+        }
+    </style>
+</head>
+<body>
+    <!-- افکت‌های پس‌زمینه -->
+    <div class="bg-stars"></div>
+    <div class="bg-gradient"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-noise"></div>
+
+    <!-- بخش هدر -->
+    <header class="hero" id="top">
+        <div class="container">
+            <div class="hero-content">
+                <div class="couple-profile">
+                    <div class="profile-container" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="500">
+                        <div class="profile-glow profile-glow-him"></div>
+                        <img src="mmd.jpg" alt="محمد" class="profile-img">
+                    </div>
+                    <div class="heart-connector">❤️</div>
+                    <div class="profile-container" data-tilt data-tilt-max="15" data-tilt-speed="400" data-tilt-perspective="500">
+                        <div class="profile-glow profile-glow-her"></div>
+                        <img src="yasna9.jpg" alt="یسنا" class="profile-img">
+                    </div>
+                </div>
+                <h1 class="couple-title">محمد و یسنا</h1>
+                <p class="couple-subtitle">هر لحظه با تو، زیباترین لحظه‌ی زندگی من است</p>
+                <div class="anniversary-counter">
+                    <span id="days-count" class="days-count">365</span> روز 
+                    <span id="time-elapsed"></span> از آغاز داستان عشق ما می‌گذرد
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator" id="scroll-down">
+            <span>بیشتر ببینید</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- بخش گالری -->
+    <section class="section gallery-section" id="gallery">
+        <div class="container">
+            <h2 class="section-title primary">گالری خاطرات ما</h2>
+            
+            <!-- گالری اسلایدر -->
+            <div class="gallery-slider-container">
+                <div class="swiper" id="gallery-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="memory-card" data-image="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?w=400&h=400&fit=crop">
+                                <div class="memory-front">
+                                    <img src="yasna1.jpg" alt="خاطره ۱" loading="lazy">
+                                    <div class="memory-date">۱۴۰۲/۰۴/۱۵</div>
+                                    <div class="memory-icon"><i class="fas fa-heart"></i></div>
+                                </div>
+                                <div class="memory-back">
+                                    <h3>اولین دیدار</h3>
+                                    <p>روزی که قلبم برای اولین بار با دیدنت به تپش افتاد. لحظه‌ای که فهمیدم تو همان معجزه‌ای هستی که منتظرش بودم.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="memory-card" data-image="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=400&h=400&fit=crop">
+                                <div class="memory-front">
+                                    <img src="yasna7.jpg" alt="خاطره ۲" loading="lazy">
+                                    <div class="memory-date">۱۴۰۲/۰۶/۲۰</div>
+                                    <div class="memory-icon"><i class="fas fa-star"></i></div>
+                                </div>
+                                <div class="memory-back">
+                                    <h3>لحظه‌های ناب</h3>
+                                    <p>زیباترین لبخندت را به یاد دارم، همان که تمام دنیا را برایم روشن کرد. کنار تو بودن، قشنگ‌ترین هدیه زندگی من است.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="memory-card" data-image="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=400&h=400&fit=crop">
+                                <div class="memory-front">
+                                    <img src="yasna8.jpg" alt="خاطره ۳" loading="lazy">
+                                    <div class="memory-date">۱۴۰۲/۰۹/۱۲</div>
+                                    <div class="memory-icon"><i class="fas fa-moon"></i></div>
+                                </div>
+                                <div class="memory-back">
+                                    <h3>شب خاطره‌انگیز</h3>
+                                    <p>آن شب که زیر آسمان پر ستاره قدم می‌زدیم و از رویاهایمان می‌گفتیم. لحظه‌ای که فهمیدم می‌خواهم تمام آینده‌ام را با تو بسازم.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="memory-card" data-image="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=400&h=400&fit=crop">
+                                <div class="memory-front">
+                                    <img src="yasna4.jpg" alt="خاطره ۴" loading="lazy">
+                                    <div class="memory-date">۱۴۰۲/۰۸/۰۵</div>
+                                    <div class="memory-icon"><i class="fas fa-map-marker-alt"></i></div>
+                                </div>
+                                <div class="memory-back">
+                                    <h3>سفر رویایی</h3>
+                                    <p>اولین سفر دونفره‌مان، جایی که دست در دست هم، زیباترین غروب خورشید را تماشا کردیم و قول دادیم همیشه کنار هم بمانیم.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="memory-card" data-image="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?w=400&h=400&fit=crop">
+                                <div class="memory-front">
+                                    <img src="yasna5.jpg" alt="خاطره ۵" loading="lazy">
+                                    <div class="memory-date">۱۴۰۲/۱۰/۲۵</div>
+                                    <div class="memory-icon"><i class="fas fa-gift"></i></div>
+                                </div>
+                                <div class="memory-back">
+                                    <h3>هدیه غافلگیرکننده</h3>
+                                    <p>روزی که با آن هدیه زیبا غافلگیرم کردی. برق چشمانت وقتی خوشحالی‌ام را دیدی، بهترین لحظه زندگی‌ام بود.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- بخش تایم‌لاین - اصلاح شده -->
+<section class="section timeline-section" id="timeline" style="display: block; visibility: visible; opacity: 1;">
+    <div class="container">
+        <h2 class="section-title secondary" style="display: block; visibility: visible;">داستان عشق ما</h2>
+        <div class="timeline-container" style="display: block; visibility: visible; opacity: 1;">
+            <div class="timeline-item" style="display: block; visibility: visible; opacity: 1; clear: both;">
+                <div class="timeline-content" style="display: block; visibility: visible; opacity: 1;">
+                    <div class="timeline-date">۱۴۰۲/۱۲/۱۶</div>
+                    <h3 class="timeline-title">اولین نگاه</h3>
+                    <p class="timeline-text">لحظه‌ای که برای اولین بار چشمانت را دیدم، دنیا برایم متوقف شد. همان لحظه فهمیدم که تو متفاوت‌ترین اتفاق زندگی من هستی.</p>
+                    <div class="timeline-icon"><i class="fas fa-eye"></i></div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item" style="display: block; visibility: visible; opacity: 1; clear: both;">
+                <div class="timeline-content" style="display: block; visibility: visible; opacity: 1;">
+                    <div class="timeline-date">۱۴۰۳/۰۱/۱۰</div>
+                    <h3 class="timeline-title">اولین قرار</h3>
+                    <p class="timeline-text">قدم زدن کنار تو، حتی در ساده‌ترین خیابان‌ها، به زیباترین خاطره زندگی‌ام تبدیل شد. صدای خنده‌هایت هنوز در گوشم طنین‌انداز است.</p>
+                    <div class="timeline-icon"><i class="fas fa-coffee"></i></div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item" style="display: block; visibility: visible; opacity: 1; clear: both;">
+                <div class="timeline-content" style="display: block; visibility: visible; opacity: 1;">
+                    <div class="timeline-date">۱۴۰۳/۰۲/۱۵</div>
+                    <h3 class="timeline-title">سفر شمال</h3>
+                    <p class="timeline-text">اولین سفر دو نفره‌مان به شمال، جایی که در کنار دریا به تو گفتم چقدر دوستت دارم. آن غروب آفتاب و قول‌هایی که به هم دادیم را هرگز فراموش نمی‌کنم.</p>
+                    <div class="timeline-icon"><i class="fas fa-umbrella-beach"></i></div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item" style="display: block; visibility: visible; opacity: 1; clear: both;">
+                <div class="timeline-content" style="display: block; visibility: visible; opacity: 1;">
+                    <div class="timeline-date">۱۴۰۳/۰۳/۲۰</div>
+                    <h3 class="timeline-title">جشن تولدت</h3>
+                    <p class="timeline-text">برق چشمانت وقتی غافلگیر شدی، زیباترین هدیه‌ای بود که می‌توانستم دریافت کنم. آن شب فهمیدم که خوشحالی تو، بزرگترین آرزوی من است.</p>
+                    <div class="timeline-icon"><i class="fas fa-birthday-cake"></i></div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+            <div class="timeline-item" style="display: block; visibility: visible; opacity: 1; clear: both;">
+                <div class="timeline-content" style="display: block; visibility: visible; opacity: 1;">
+                    <div class="timeline-date">۱۴۰۳/۰۶/۱۶</div>
+                    <h3 class="timeline-title">شش ماهگی رابطه</h3>
+                    <p class="timeline-text">شش ماه از آغاز داستان عشقمان گذشت. در این مدت، هر روز بیشتر از قبل عاشقت شدم و فهمیدم که تو بهترین اتفاق زندگی من هستی.</p>
+                    <div class="timeline-icon"><i class="fas fa-heart"></i></div>
+                </div>
+                <div class="timeline-dot"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- بخش شعر -->
+    <section class="section poem-section" id="poem">
+        <div class="container">
+            <div class="poem-container">
+                <h2 class="section-title accent">نجوای قلبم</h2>
+                <div class="poem-card" data-tilt data-tilt-max="5" data-tilt-speed="400" data-tilt-perspective="1000">
+                    <div class="poem-icon"><i class="fas fa-feather-alt"></i></div>
+                    <div class="poem-text">
+                        تو آمدی و روزگارم رنگ دیگری گرفت<br>
+                        در چشمانت ستاره‌ها را دیدم<br>
+                        و در لبخندت، طلوع خورشید را<br><br>
+                        
+                        هر نفس با تو، معجزه‌ای است<br>
+                        که قلبم را از نو می‌سازد<br>
+                        هر لحظه با تو، ابدیتی است<br>
+                        که زمان را معنا می‌بخشد<br><br>
+                        
+                        تو همان رویای شیرینی هستی<br>
+                        که هرگز نمی‌خواهم از آن بیدار شوم<br>
+                        همان آرامشی که در هیاهوی زندگی<br>
+                        به آن پناه می‌برم<br><br>
+                        
+                        دوستت دارم به وسعت تمام آسمان<br>
+                        به عمق اقیانوس‌ها و به بلندای کوه‌ها<br>
+                        دوستت دارم بی‌انتها...
+                    </div>
+                    <div class="poem-author">تقدیم به یسنای زندگی‌ام</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- دکمه‌های تعاملی -->
+    <div class="buttons-container">
+        <button class="btn" id="message-btn"><i class="fas fa-envelope-open-text"></i> پیام مخفی من</button>
+        <button class="btn secondary" id="gallery-btn"><i class="fas fa-images"></i> گالری عکس‌ها</button>
+        <button class="btn accent" id="music-btn"><i class="fas fa-music"></i> موسیقی عاشقانه</button>
+    </div>
+
+    <!-- مدال پیام مخفی -->
+    <div class="modal-overlay" id="message-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-message-modal"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">برای تو که تمام دنیای منی</h2>
+            <p class="modal-text">
+                یسنای عزیزم،<br><br>
+                گاهی کلمات برای بیان عمق احساسم به تو کافی نیستند.<br>
+                تو همان نیمه‌ی گمشده‌ای هستی که روح مرا کامل می‌کند.<br>
+                هر روز که می‌گذرد، عشقم به تو عمیق‌تر و ریشه‌دارتر می‌شود.<br>
+                در کنار تو، زندگی معنای تازه‌ای پیدا کرده است.<br>
+                قول می‌دهم تا آخرین نفس، پناهت باشم و دستانت را رها نکنم.<br>
+                تو معنای زیبای زندگی منی...
+            </p>
+            <img src="yasna6.jpg" alt="عکس ویژه" class="modal-image">
+            <p class="modal-signature">
+                تا ابد عاشقت،<br>
+                <strong>محمد</strong>
+            </p>
+        </div>
+    </div>
+
+    <!-- مدال گالری -->
+    <div class="gallery-modal-overlay" id="gallery-modal">
+        <div class="gallery-modal-content">
+            <div class="gallery-modal-header">
+                <h3 class="gallery-modal-title">گالری خاطرات ما</h3>
+                <button class="modal-close" id="close-gallery-modal"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="gallery-modal-body">
+                <button class="gallery-nav gallery-prev" id="gallery-prev"><i class="fas fa-chevron-right"></i></button>
+                <div class="gallery-image-container">
+                    <img src="yasna1.jpg" alt="تصویر گالری" class="gallery-image" id="current-gallery-image">
+                </div>
+                <button class="gallery-nav gallery-next" id="gallery-next"><i class="fas fa-chevron-left"></i></button>
+                <div class="gallery-counter" id="gallery-counter">1 / 5</div>
+            </div>
+            <div class="gallery-thumbnails" id="gallery-thumbnails">
+                <!-- تصاویر بندانگشتی به صورت دستی اضافه می‌کنیم -->
+                <div class="gallery-thumbnail active">
+                    <img src="yasna1.jpg" alt="thumbnail 1">
+                </div>
+                <div class="gallery-thumbnail">
+                    <img src="yasna7.jpg" alt="thumbnail 2">
+                </div>
+                <div class="gallery-thumbnail">
+                    <img src="yasna8.jpg" alt="thumbnail 3">
+                </div>
+                <div class="gallery-thumbnail">
+                    <img src="yasna4.jpg" alt="thumbnail 4">
+                </div>
+                <div class="gallery-thumbnail">
+                    <img src="yasna5.jpg" alt="thumbnail 5">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- پخش‌کننده صوتی - کد اصلاح شده -->
+    <div class="audio-player" id="audio-player">
+        <i class="fas fa-play" id="audio-icon"></i>
+        <div class="audio-player-inner">
+            <div class="audio-controls">
+                <i class="fas fa-step-backward" id="prev-track"></i>
+                <i class="fas fa-play" id="play-pause"></i>
+                <i class="fas fa-step-forward" id="next-track"></i>
+            </div>
+            <div class="audio-info" id="audio-info">
+                موسیقی عاشقانه
+            </div>
+        </div>
+    </div>
+
+    <!-- اصلاح تگ audio -->
+    <audio id="bg-music" preload="auto">
+        <!-- حذف source tags -->
+    </audio>
+
+    <!-- تغییر تم -->
+    <div class="theme-toggle" id="theme-toggle">
+        <i class="fas fa-moon" id="theme-icon"></i>
+    </div>
+
+    <!-- فوتر -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                ساخته شده با <span class="footer-heart">❤️</span> برای یسنا - <span id="current-date"></span>
+            </p>
+        </div>
+    </footer>
+
+    <!-- افکت‌های بارش گل و قلب -->
+    <div id="floating-elements-container" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9998; overflow: hidden;"></div>
+
+    <!-- دکمه تنظیمات -->
+    <div class="settings-toggle" id="settings-toggle">
+        <i class="fas fa-cog"></i>
+    </div>
+
+    <!-- مدال تنظیمات -->
+    <div class="modal-overlay" id="settings-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="close-settings-modal"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">تنظیمات</h2>
+            
+            <div class="settings-section">
+                <h3>تاریخ آغاز رابطه</h3>
+                <div class="date-inputs">
+                    <div class="input-group">
+                        <label for="start-year">سال</label>
+                        <input type="number" id="start-year" min="1350" max="1410" value="1402" class="date-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="start-month">ماه</label>
+                        <input type="number" id="start-month" min="1" max="12" value="12" class="date-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="start-day">روز</label>
+                        <input type="number" id="start-day" min="1" max="31" value="16" class="date-input">
+                    </div>
+                </div>
+                <button class="btn" id="save-date">ذخیره تاریخ</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                // تنظیم ارتفاع ویوپورت برای مرورگرهای موبایل
+                const setVh = () => {
+                    let vh = window.innerHeight * 0.01;
+                    document.documentElement.style.setProperty('--vh', `${vh}px`);
+                };
+                
+                setVh();
+                window.addEventListener('resize', setVh);
+                
+                // ثبت پلاگین‌های GSAP
+                gsap.registerPlugin(ScrollTrigger, MotionPathPlugin);
+                
+                // تنظیم تاریخ آشنایی با استفاده از Luxon
+                // تاریخ 16 اسفند 1402 معادل با 6 مارس 2024 میلادی است
+                const startDate = luxon.DateTime.fromObject({ year: 2024, month: 3, day: 6 });
+                const today = luxon.DateTime.now();
+                const diffDays = Math.floor(today.diff(startDate, 'days').days);
+                
+                // محاسبه سال، ماه و روز
+                const years = Math.floor(diffDays / 365);
+                const months = Math.floor((diffDays % 365) / 30);
+                const days = Math.floor((diffDays % 365) % 30);
+                
+                // بروزرسانی شمارنده سالگرد
+                const daysCount = document.getElementById('days-count');
+                daysCount.textContent = diffDays.toString();
+                
+                // نمایش زمان سپری شده
+                const timeElapsed = document.getElementById('time-elapsed');
+                let timeText = '';
+                if (years > 0) {
+                    timeText += `(${years} سال`;
+                    if (months > 0) timeText += ` و ${months} ماه`;
+                    timeText += ')';
+                } else if (months > 0) {
+                    timeText += `(${months} ماه`;
+                    if (days > 0) timeText += ` و ${days} روز`;
+                    timeText += ')';
+                }
+                timeElapsed.textContent = timeText;
+                
+                // تنظیم تاریخ فعلی در فوتر
+                const currentDate = document.getElementById('current-date');
+                currentDate.textContent = today.setLocale('fa').toLocaleString({
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                });
+                
+                // اسکرول به پایین
+                const scrollDown = document.getElementById('scroll-down');
+                scrollDown.addEventListener('click', () => {
+                    window.scrollTo({
+                        top: window.innerHeight,
+                        behavior: 'smooth'
+                    });
+                });
+                
+                // راه‌اندازی اسلایدر گالری
+                const swiper = new Swiper('#gallery-swiper', {
+                    effect: 'coverflow',
+                    grabCursor: true,
+                    centeredSlides: true,
+                    slidesPerView: 'auto',
+                    coverflowEffect: {
+                        rotate: 20,
+                        stretch: 0,
+                        depth: 200,
+                        modifier: 1,
+                        slideShadows: true,
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    loop: true,
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false,
+                    },
+                });
+                
+                // فعال‌سازی افکت تیلت برای عناصر مشخص
+                if (typeof VanillaTilt !== 'undefined') {
+                    VanillaTilt.init(document.querySelectorAll("[data-tilt]"));
+                }
+                
+                // مدال پیام مخفی
+                const messageModal = document.getElementById('message-modal');
+                const messageBtn = document.getElementById('message-btn');
+                const closeMessageModal = document.getElementById('close-message-modal');
+                
+                messageBtn.addEventListener('click', () => {
+                    messageModal.classList.add('active');
+                    createParticleEffect(messageBtn);
+                    if (typeof confetti !== 'undefined') {
+                        confetti({
+                            particleCount: 100,
+                            spread: 70,
+                            origin: { y: 0.6 },
+                            colors: ['#8A2BE2', '#FF3E78', '#00F5FF']
+                        });
+                    }
+                });
+                
+                closeMessageModal.addEventListener('click', () => {
+                    messageModal.classList.remove('active');
+                });
+                
+                // بستن مدال با کلیک خارج از آن
+                messageModal.addEventListener('click', (e) => {
+                    if (e.target === messageModal) {
+                        messageModal.classList.remove('active');
+                    }
+                });
+                
+                // مدال گالری
+                const galleryModal = document.getElementById('gallery-modal');
+                const galleryBtn = document.getElementById('gallery-btn');
+                const closeGalleryModal = document.getElementById('close-gallery-modal');
+                const currentGalleryImage = document.getElementById('current-gallery-image');
+                const galleryPrev = document.getElementById('gallery-prev');
+                const galleryNext = document.getElementById('gallery-next');
+                const galleryCounter = document.getElementById('gallery-counter');
+                const galleryThumbnails = document.querySelectorAll('.gallery-thumbnail');
+                
+                // تصاویر گالری - اطمینان از مسیر صحیح
+                const galleryImages = [
+                    {
+                        src: "yasna1.jpg",
+                        title: "اولین دیدار",
+                        description: "روزی که قلبم برای اولین بار با دیدنت به تپش افتاد."
+                    },
+                    {
+                        src: "yasna7.jpg",
+                        title: "لحظه‌های ناب",
+                        description: "زیباترین لبخندت را به یاد دارم، همان که تمام دنیا را برایم روشن کرد."
+                    },
+                    {
+                        src: "yasna8.jpg",
+                        title: "شب خاطره‌انگیز",
+                        description: "آن شب که زیر آسمان پر ستاره قدم می‌زدیم و از رویاهایمان می‌گفتیم."
+                    },
+                    {
+                        src: "yasna4.jpg",
+                        title: "سفر رویایی",
+                        description: "اولین سفر دونفره‌مان، جایی که دست در دست هم، زیباترین غروب خورشید را تماشا کردیم."
+                    },
+                    {
+                        src: "yasna5.jpg",
+                        title: "هدیه غافلگیرکننده",
+                        description: "روزی که با آن هدیه زیبا غافلگیرم کردی."
+                    }
+                ];
+                
+                let currentImageIndex = 0;
+                
+                // بروزرسانی تصویر گالری
+                function updateGalleryImage() {
+                    const image = galleryImages[currentImageIndex];
+                    currentGalleryImage.src = image.src;
+                    galleryCounter.textContent = `${currentImageIndex + 1} / ${galleryImages.length}`;
+                    
+                    // بروزرسانی تصویر بندانگشتی فعال
+                    galleryThumbnails.forEach((thumb, i) => {
+                        thumb.classList.toggle('active', i === currentImageIndex);
+                    });
+                    
+                    // افکت انیمیشن
+                    gsap.fromTo(currentGalleryImage, 
+                        { opacity: 0, scale: 0.9 }, 
+                        { opacity: 1, scale: 1, duration: 0.5, ease: 'power2.out' }
+                    );
+                }
+                
+                // باز کردن مدال گالری
+                galleryBtn.addEventListener('click', () => {
+                    galleryModal.classList.add('active');
+                    updateGalleryImage();
+                    createParticleEffect(galleryBtn);
+                });
+                
+                // بستن مدال گالری
+                closeGalleryModal.addEventListener('click', () => {
+                    galleryModal.classList.remove('active');
+                });
+                
+                // ناوبری گالری
+                galleryPrev.addEventListener('click', () => {
+                    currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                    updateGalleryImage();
+                });
+                
+                galleryNext.addEventListener('click', () => {
+                    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                    updateGalleryImage();
+                });
+                
+                // بستن مدال گالری با کلیک خارج از آن
+                galleryModal.addEventListener('click', (e) => {
+                    if (e.target === galleryModal) {
+                        galleryModal.classList.remove('active');
+                    }
+                });
+                
+                // کلیک روی تصاویر بندانگشتی
+                galleryThumbnails.forEach((thumbnail, index) => {
+                    thumbnail.addEventListener('click', () => {
+                        currentImageIndex = index;
+                        updateGalleryImage();
+                    });
+                });
+                
+                // ناوبری گالری با کیبورد
+                document.addEventListener('keydown', (e) => {
+                    if (!galleryModal.classList.contains('active')) return;
+                    
+                    if (e.key === 'ArrowLeft' || e.key === 'ArrowRight') {
+                        e.preventDefault();
+                        if (e.key === 'ArrowLeft') {
+                            currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                        } else {
+                            currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                        }
+                        updateGalleryImage();
+                    } else if (e.key === 'Escape') {
+                        galleryModal.classList.remove('active');
+                    }
+                });
+                
+                // پشتیبانی از سوایپ برای گالری
+                let touchStartX = 0;
+                let touchEndX = 0;
+                
+                currentGalleryImage.addEventListener('touchstart', (e) => {
+                    touchStartX = e.changedTouches[0].screenX;
+                });
+                
+                currentGalleryImage.addEventListener('touchend', (e) => {
+                    touchEndX = e.changedTouches[0].screenX;
+                    handleSwipe();
+                });
+                
+                function handleSwipe() {
+                    if (touchEndX < touchStartX - 50) {
+                        // سوایپ به چپ
+                        currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
+                        updateGalleryImage();
+                    } else if (touchEndX > touchStartX + 50) {
+                        // سوایپ به راست
+                        currentImageIndex = (currentImageIndex - 1 + galleryImages.length) % galleryImages.length;
+                        updateGalleryImage();
+                    }
+                }
+                
+                // کنترل‌های موسیقی
+                const audioPlayer = document.getElementById('audio-player');
+                const audioIcon = document.getElementById('audio-icon');
+                const playPauseBtn = document.getElementById('play-pause');
+                const prevTrackBtn = document.getElementById('prev-track');
+                const nextTrackBtn = document.getElementById('next-track');
+                const audioInfo = document.getElementById('audio-info');
+                const bgMusic = document.getElementById('bg-music');
+                const musicBtn = document.getElementById('music-btn');
+                
+                let isPlaying = false;
+                let isExpanded = false;
+                
+                // لیست موسیقی‌ها
+                const playlist = [
+                    { 
+                        title: "رز سفید", 
+                        artist: "Haamim", 
+                        src: "Rose.mp3" 
+                    },
+                    { 
+                        title: "سیاه سفید", 
+                        artist: "Hamim", 
+                        src: "سیا سفید.mp3" 
+                    }
+                ];
+                
+                let currentTrackIndex = 0;
+                
+                // بروزرسانی اطلاعات آهنگ
+                function updateTrackInfo() {
+                    const track = playlist[currentTrackIndex];
+                    audioInfo.textContent = `${track.title} - ${track.artist}`;
+                    bgMusic.src = track.src;
+                    
+                    if (isPlaying) {
+                        bgMusic.play().catch(error => {
+                            console.log("خطا در پخش صدا: ", error);
+                            isPlaying = false;
+                            audioIcon.className = 'fas fa-play';
+                            playPauseBtn.className = 'fas fa-play';
+                        });
+                    }
+                }
+                
+                // تغییر آهنگ
+                function changeTrack(direction) {
+                    if (direction === 'next') {
+                        currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+                    } else {
+                        currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+                    }
+                    
+                    const track = playlist[currentTrackIndex];
+                    bgMusic.src = track.src;
+                    audioInfo.textContent = `${track.title} - ${track.artist}`;
+                    
+                    // اگر در حال پخش بود، آهنگ جدید را پخش کن
+                    if (isPlaying) {
+                        const playPromise = bgMusic.play();
+                        
+                        if (playPromise !== undefined) {
+                            playPromise.catch(error => {
+                                console.error("خطا در پخش آهنگ جدید:", error);
+                                // بازگرداندن وضعیت دکمه‌ها به حالت اولیه
+                                audioIcon.className = 'fas fa-play';
+                                playPauseBtn.className = 'fas fa-play';
+                                musicBtn.innerHTML = '<i class="fas fa-music"></i> پخش موسیقی';
+                                isPlaying = false;
+                            });
+                        }
+                    }
+                }
+                
+                // توسعه/جمع کردن پخش‌کننده
+                function togglePlayerExpansion() {
+                    isExpanded = !isExpanded;
+                    audioPlayer.classList.toggle('expanded', isExpanded);
+                    
+                    if (isExpanded) {
+                        audioIcon.style.display = 'none';
+                    } else {
+                        audioIcon.style.display = 'block';
+                    }
+                }
+                
+                // پخش/توقف موسیقی
+                function toggleAudio() {
+                    // اطمینان از تنظیم منبع صوتی
+                    if (!bgMusic.src || bgMusic.src.endsWith('/')) {
+                        const track = playlist[currentTrackIndex];
+                        bgMusic.src = track.src;
+                        audioInfo.textContent = `${track.title} - ${track.artist}`;
+                    }
+                    
+                    if (!isExpanded) {
+                        togglePlayerExpansion();
+                    }
+                    
+                    if (isPlaying) {
+                        bgMusic.pause();
+                        audioIcon.className = 'fas fa-play';
+                        playPauseBtn.className = 'fas fa-play';
+                        musicBtn.innerHTML = '<i class="fas fa-music"></i> پخش موسیقی';
+                    } else {
+                        const playPromise = bgMusic.play();
+                        
+                        if (playPromise !== undefined) {
+                            playPromise.then(() => {
+                                audioIcon.className = 'fas fa-pause';
+                                playPauseBtn.className = 'fas fa-pause';
+                                musicBtn.innerHTML = '<i class="fas fa-pause"></i> توقف موسیقی';
+                                isPlaying = true;
+                            }).catch(error => {
+                                console.error("خطا در پخش صدا:", error);
+                                audioIcon.className = 'fas fa-play';
+                                playPauseBtn.className = 'fas fa-play';
+                                musicBtn.innerHTML = '<i class="fas fa-music"></i> پخش موسیقی';
+                                isPlaying = false;
+                            });
+                        }
+                    }
+                    isPlaying = !isPlaying;
+                }
+                
+                // رویدادهای پخش‌کننده صوتی
+                audioPlayer.addEventListener('click', (e) => {
+                    if (e.target === audioIcon || e.target === audioPlayer) {
+                        if (!isExpanded) {
+                            togglePlayerExpansion();
+                        } else if (e.target === audioPlayer) {
+                            togglePlayerExpansion();
+                        } else {
+                            toggleAudio();
+                        }
+                    }
+                    createParticleEffect(audioPlayer);
+                });
+                
+                playPauseBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleAudio();
+                });
+                
+                prevTrackBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    changeTrack('prev');
+                });
+                
+                nextTrackBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    changeTrack('next');
+                });
+                
+                musicBtn.addEventListener('click', () => {
+                    if (!isExpanded) {
+                        togglePlayerExpansion();
+                    }
+                    toggleAudio();
+                    createParticleEffect(musicBtn);
+                });
+                
+                // تنظیم اولیه آهنگ
+                updateTrackInfo();
+                
+                // افکت ذرات
+                function createParticleEffect(element) {
+                    const colors = ['#8A2BE2', '#FF3E78', '#00F5FF'];
+                    const particlesCount = 30;
+                    const rect = element.getBoundingClientRect();
+                    
+                    for (let i = 0; i < particlesCount; i++) {
+                        const particle = document.createElement('div');
+                        particle.style.position = 'fixed';
+                        particle.style.width = `${Math.random() * 10 + 5}px`;
+                        particle.style.height = particle.style.width;
+                        particle.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                        particle.style.borderRadius = '50%';
+                        particle.style.pointerEvents = 'none';
+                        particle.style.zIndex = '9999';
+                        
+                        // موقعیت ذره در مرکز دکمه
+                        const x = rect.left + rect.width / 2;
+                        const y = rect.top + rect.height / 2;
+                        
+                        particle.style.left = `${x}px`;
+                        particle.style.top = `${y}px`;
+                        
+                        document.body.appendChild(particle);
+                        
+                        // انیمیشن با GSAP
+                        gsap.to(particle, {
+                            x: (Math.random() - 0.5) * 200,
+                            y: (Math.random() - 0.5) * 200,
+                            opacity: 1,
+                            duration: 0.1,
+                            onComplete: () => {
+                                gsap.to(particle, {
+                                    x: (Math.random() - 0.5) * 400,
+                                    y: (Math.random() - 0.5) * 400,
+                                    opacity: 0,
+                                    duration: 1,
+                                    ease: 'power2.out',
+                                    onComplete: () => {
+                                        particle.remove();
+                                    }
+                                });
+                            }
+                        });
+                    }
+                }
+                
+                // انیمیشن‌های GSAP
+                // انیمیشن‌های هدر
+                gsap.from('.couple-profile', {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1.2,
+                    ease: 'power3.out'
+                });
+                
+                gsap.from('.couple-title', {
+                    y: 30,
+                    opacity: 0,
+                    duration: 1.2,
+                    delay: 0.3,
+                    ease: 'power3.out'
+                });
+                
+                gsap.from('.couple-subtitle', {
+                    y: 30,
+                    opacity: 0,
+                    duration: 1.2,
+                    delay: 0.6,
+                    ease: 'power3.out'
+                });
+                
+                gsap.from('.anniversary-counter', {
+                    y: 30,
+                    opacity: 0,
+                    duration: 1.2,
+                    delay: 0.9,
+                    ease: 'power3.out'
+                });
+                
+                // انیمیشن‌های اسکرول
+                gsap.utils.toArray('.swiper-slide').forEach((slide, i) => {
+                    gsap.from(slide, {
+                        y: 100,
+                        opacity: 0,
+                        duration: 0.8,
+                        delay: i * 0.1,
+                        scrollTrigger: {
+                            trigger: '.gallery-section',
+                            start: 'top bottom-=100',
+                            toggleActions: 'play none none none'
+                        }
+                    });
+                });
+                
+                // انیمیشن تایم‌لاین
+                gsap.utils.toArray('.timeline-item').forEach((item, i) => {
+                    const tl = gsap.timeline({
+                        scrollTrigger: {
+                            trigger: item,
+                            start: 'top bottom-=100',
+                            toggleActions: 'play none none none'
+                        }
+                    });
+                    
+                    tl.from(item.querySelector('.timeline-content'), {
+                        x: i % 2 === 0 ? -100 : 100,
+                        opacity: 0,
+                        duration: 0.8
+                    })
+                    .from(item.querySelector('.timeline-dot'), {
+                        scale: 0,
+                        opacity: 0,
+                        duration: 0.5
+                    }, '-=0.5')
+                    .from(item.querySelector('.timeline-date'), {
+                        y: 20,
+                        opacity: 0,
+                        duration: 0.5
+                    }, '-=0.3');
+                });
+                
+                // انیمیشن بخش شعر
+                gsap.from('.poem-card', {
+                    y: 50,
+                    opacity: 0,
+                    duration: 1,
+                    scrollTrigger: {
+                        trigger: '.poem-card',
+                        start: 'top bottom-=100',
+                        toggleActions: 'play none none none'
+                    }
+                });
+                
+                // انیمیشن دکمه‌ها
+                gsap.utils.toArray('.btn').forEach((btn, i) => {
+                    gsap.from(btn, {
+                        y: 30,
+                        opacity: 0,
+                        duration: 0.6,
+                        delay: i * 0.2,
+                        scrollTrigger: {
+                            trigger: '.buttons-container',
+                            start: 'top bottom-=100',
+                            toggleActions: 'play none none none'
+                        }
+                    });
+                });
+                
+                // تغییر تم
+                const themeToggle = document.getElementById('theme-toggle');
+                const themeIcon = document.getElementById('theme-icon');
+                let darkTheme = true; // تم پیش‌فرض تاریک است
+                
+                themeToggle.addEventListener('click', () => {
+                    darkTheme = !darkTheme;
+                    document.body.classList.toggle('light-theme', !darkTheme);
+                    themeIcon.className = darkTheme ? 'fas fa-moon' : 'fas fa-sun';
+                    createParticleEffect(themeToggle);
+                    
+                    // ذخیره تنظیمات تم در localStorage
+                    localStorage.setItem('darkTheme', darkTheme);
+                });
+                
+                // بررسی تنظیمات ذخیره شده تم
+                if (localStorage.getItem('darkTheme') !== null) {
+                    darkTheme = localStorage.getItem('darkTheme') === 'true';
+                    document.body.classList.toggle('light-theme', !darkTheme);
+                    themeIcon.className = darkTheme ? 'fas fa-moon' : 'fas fa-sun';
+                }
+                
+                // افکت قلب‌های شناور
+                function createFloatingHearts() {
+                    const container = document.querySelector('.hero');
+                    const heartColors = ['#FF3E78', '#FF6B9E', '#D91557'];
+                    
+                    for (let i = 0; i < 15; i++) {
+                        const heart = document.createElement('div');
+                        heart.innerHTML = '❤️';
+                        heart.style.position = 'absolute';
+                        heart.style.fontSize = `${Math.random() * 20 + 10}px`;
+                        heart.style.left = `${Math.random() * 100}%`;
+                        heart.style.top = `${Math.random() * 100}%`;
+                        heart.style.opacity = Math.random() * 0.5 + 0.2;
+                        heart.style.color = heartColors[Math.floor(Math.random() * heartColors.length)];
+                        heart.style.zIndex = '0';
+                        heart.style.filter = 'blur(1px)';
+                        heart.style.pointerEvents = 'none';
+                        
+                        container.appendChild(heart);
+                        
+                        gsap.to(heart, {
+                            y: -100,
+                            x: Math.random() * 50 - 25,
+                            opacity: 0,
+                            duration: Math.random() * 10 + 10,
+                            ease: 'power1.out',
+                            repeat: -1,
+                            delay: Math.random() * 5
+                        });
+                    }
+                }
+                
+                createFloatingHearts();
+            } catch (error) {
+                console.error("خطا در اجرای اسکریپت:", error);
+            }
+        });
+
+        // اضافه کردن انیمیشن‌های بارش گل و قلب
+        function createFloatingElements() {
+            const container = document.getElementById('floating-elements-container');
+            const elements = ['❤️', '🌹', '💖', '💘', '💕', '💓', '💗', '💞', '🌸', '🌷', '💐', '🌺', '✨'];
+            const colors = ['#FF3E78', '#FF6B9E', '#D91557', '#8A2BE2', '#B15EFF', '#5D12D2'];
+            const totalElements = 50;
+            
+            // پاکسازی المان‌های قبلی
+            container.innerHTML = '';
+            
+            // ایجاد المان‌های جدید
+            for (let i = 0; i < totalElements; i++) {
+                const element = document.createElement('div');
+                const isEmoji = Math.random() > 0.3; // 70% احتمال استفاده از ایموجی
+                
+                if (isEmoji) {
+                    // استفاده از ایموجی
+                    element.innerHTML = elements[Math.floor(Math.random() * elements.length)];
+                    element.style.fontSize = `${Math.random() * 20 + 10}px`;
+                    element.style.opacity = Math.random() * 0.7 + 0.3;
+                } else {
+                    // استفاده از المان گرافیکی (قلب یا گل)
+                    const size = Math.random() * 20 + 10;
+                    element.style.width = `${size}px`;
+                    element.style.height = `${size}px`;
+                    element.style.opacity = Math.random() * 0.7 + 0.3;
+                    element.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    // انتخاب بین قلب یا دایره (گل)
+                    if (Math.random() > 0.5) {
+                        // قلب
+                        element.style.background = 'none';
+                        element.style.boxShadow = `0 0 10px ${colors[Math.floor(Math.random() * colors.length)]}`;
+                        element.style.clipPath = 'path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z")';
+                    } else {
+                        // گل (دایره)
+                        element.style.borderRadius = '50%';
+                        element.style.boxShadow = `0 0 10px ${colors[Math.floor(Math.random() * colors.length)]}`;
+                        
+                        // افزودن افکت گل‌برگ
+                        if (Math.random() > 0.5) {
+                            const petalCount = Math.floor(Math.random() * 3) + 5;
+                            element.style.boxShadow = `0 0 0 2px ${colors[Math.floor(Math.random() * colors.length)]}`;
+                            element.style.background = `radial-gradient(circle at center, ${colors[Math.floor(Math.random() * colors.length)]} 30%, transparent 70%)`;
+                        }
+                    }
+                }
+                
+                // استایل‌های مشترک
+                element.style.position = 'absolute';
+                element.style.left = `${Math.random() * 100}%`;
+                element.style.top = `-50px`;
+                element.style.filter = 'blur(0.5px)';
+                element.style.pointerEvents = 'none';
+                element.style.zIndex = Math.floor(Math.random() * 10);
+                element.style.transform = `rotate(${Math.random() * 360}deg)`;
+                
+                container.appendChild(element);
+                
+                // انیمیشن با GSAP
+                gsap.to(element, {
+                    y: window.innerHeight + 100,
+                    x: `+=${Math.random() * 200 - 100}`,
+                    rotation: `+=${Math.random() * 360}`,
+                    duration: Math.random() * 15 + 10,
+                    ease: 'power1.inOut',
+                    delay: Math.random() * 5,
+                    repeat: -1,
+                    onRepeat: () => {
+                        gsap.set(element, {
+                            y: -50,
+                            x: `${Math.random() * 100}%`,
+                            rotation: Math.random() * 360
+                        });
+                    }
+                });
+            }
+        }
+        
+        // ایجاد بارش گل و قلب در لود صفحه
+        window.addEventListener('load', createFloatingElements);
+        
+        // ایجاد بارش گل و قلب در هنگام اسکرول به بخش‌های مختلف
+        const sections = document.querySelectorAll('section');
+        
+        sections.forEach(section => {
+            ScrollTrigger.create({
+                trigger: section,
+                start: 'top center',
+                onEnter: () => createBurstEffect(section),
+                once: true
+            });
+        });
+        
+        // افکت انفجار گل و قلب در هنگام ورود به هر بخش
+        function createBurstEffect(section) {
+            if (!section) return;
+            
+            const rect = section.getBoundingClientRect();
+            if (!rect) return;
+            
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            
+            const elements = ['❤️', '🌹', '💖', '💘', '💕', '💓', '💗', '💞', '🌸', '🌷', '💐', '🌺', '✨'];
+            const colors = ['#FF3E78', '#FF6B9E', '#D91557', '#8A2BE2', '#B15EFF', '#5D12D2'];
+            
+            for (let i = 0; i < 20; i++) {
+                const element = document.createElement('div');
+                const isEmoji = Math.random() > 0.3;
+                
+                if (isEmoji) {
+                    element.innerHTML = elements[Math.floor(Math.random() * elements.length)];
+                    element.style.fontSize = `${Math.random() * 30 + 15}px`;
+                } else {
+                    const size = Math.random() * 30 + 15;
+                    element.style.width = `${size}px`;
+                    element.style.height = `${size}px`;
+                    element.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                    
+                    if (Math.random() > 0.5) {
+                        element.style.background = 'none';
+                        element.style.boxShadow = `0 0 10px ${colors[Math.floor(Math.random() * colors.length)]}`;
+                        element.style.clipPath = 'path("M12 21.593c-5.63-5.539-11-10.297-11-14.402 0-3.791 3.068-5.191 5.281-5.191 1.312 0 4.151.501 5.719 4.457 1.59-3.968 4.464-4.447 5.726-4.447 2.54 0 5.274 1.621 5.274 5.181 0 4.069-5.136 8.625-11 14.402z")';
+                    } else {
+                        element.style.borderRadius = '50%';
+                        element.style.boxShadow = `0 0 10px ${colors[Math.floor(Math.random() * colors.length)]}`;
+                    }
+                }
+                
+                element.style.position = 'fixed';
+                element.style.left = `${centerX}px`;
+                element.style.top = `${centerY}px`;
+                element.style.opacity = Math.random() * 0.7 + 0.3;
+                element.style.pointerEvents = 'none';
+                element.style.zIndex = 9999;
+                
+                document.body.appendChild(element);
+                
+                const angle = Math.random() * Math.PI * 2;
+                const distance = Math.random() * 200 + 50;
+                const duration = Math.random() * 2 + 1;
+                
+                gsap.to(element, {
+                    x: centerX + Math.cos(angle) * distance,
+                    y: centerY + Math.sin(angle) * distance,
+                    opacity: 0,
+                    rotation: Math.random() * 720 - 360,
+                    duration: duration,
+                    ease: 'power3.out',
+                    onComplete: () => {
+                        element.remove();
+                    }
+                });
+            }
+        }
+        
+        // افزودن افکت بارش قلب و گل هنگام کلیک روی دکمه‌ها
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                createClickBurst(e.clientX, e.clientY);
+            });
+        });
+        
+        // افکت انفجار قلب و گل در محل کلیک
+        function createClickBurst(x, y) {
+            const elements = ['❤️', '🌹', '💖', '💘', '💕', '💓', '💗', '💞', '🌸', '🌷', '💐', '🌺', '✨'];
+            
+            for (let i = 0; i < 15; i++) {
+                const element = document.createElement('div');
+                element.innerHTML = elements[Math.floor(Math.random() * elements.length)];
+                element.style.position = 'fixed';
+                element.style.left = `${x}px`;
+                element.style.top = `${y}px`;
+                element.style.fontSize = `${Math.random() * 25 + 10}px`;
+                element.style.pointerEvents = 'none';
+                element.style.zIndex = 9999;
+                element.style.opacity = 0.8;
+                
+                document.body.appendChild(element);
+                
+                const angle = Math.random() * Math.PI * 2;
+                const distance = Math.random() * 100 + 30;
+                const duration = Math.random() * 1.5 + 0.5;
+                
+                gsap.to(element, {
+                    x: x + Math.cos(angle) * distance,
+                    y: y + Math.sin(angle) * distance,
+                    opacity: 0,
+                    rotation: Math.random() * 360,
+                    duration: duration,
+                    ease: 'power2.out',
+                    onComplete: () => {
+                        element.remove();
+                    }
+                });
+            }
+        }
+        
+        // افزودن افکت بارش قلب و گل برای بخش شعر
+        const poemCard = document.querySelector('.poem-card');
+        if (poemCard) {
+            poemCard.addEventListener('mouseenter', () => {
+                const rect = poemCard.getBoundingClientRect();
+                createPoemHearts(rect);
+            });
+        }
+        
+        // افکت بارش قلب برای بخش شعر
+        function createPoemHearts(rect) {
+            if (!rect || typeof rect.left === 'undefined') return;
+            
+            const heartCount = 15;
+            const heartColors = ['#FF3E78', '#FF6B9E', '#D91557'];
+            
+            for (let i = 0; i < heartCount; i++) {
+                const heart = document.createElement('div');
+                heart.innerHTML = '❤️';
+                heart.style.position = 'fixed';
+                heart.style.fontSize = `${Math.random() * 15 + 8}px`;
+                heart.style.left = `${rect.left + Math.random() * rect.width}px`;
+                heart.style.top = `${rect.top - 20}px`;
+                heart.style.opacity = Math.random() * 0.7 + 0.3;
+                heart.style.color = heartColors[Math.floor(Math.random() * heartColors.length)];
+                heart.style.zIndex = '999';
+                heart.style.pointerEvents = 'none';
+                
+                document.body.appendChild(heart);
+                
+                gsap.to(heart, {
+                    y: rect.height + 50,
+                    x: `+=${Math.random() * 100 - 50}`,
+                    rotation: Math.random() * 360,
+                    opacity: 0,
+                    duration: Math.random() * 4 + 3,
+                    ease: 'power1.in',
+                    onComplete: () => {
+                        heart.remove();
+                    }
+                });
+            }
+        }
+        
+        // تنظیم اجرای دوره‌ای بارش گل و قلب
+        setInterval(() => {
+            if (Math.random() > 0.7) { // 30% احتمال اجرا در هر بازه زمانی
+                createRandomBurst();
+            }
+        }, 5000); // هر 5 ثانیه
+        
+        // ایجاد بارش تصادفی در صفحه
+        function createRandomBurst() {
+            const x = Math.random() * window.innerWidth;
+            const y = Math.random() * window.innerHeight / 2;
+            
+            const elements = ['❤️', '🌹', '💖', '💘', '💕', '💓', '💗', '💞', '🌸', '🌷', '💐', '🌺', '✨'];
+            const count = Math.floor(Math.random() * 10) + 5;
+            
+            for (let i = 0; i < count; i++) {
+                const element = document.createElement('div');
+                element.innerHTML = elements[Math.floor(Math.random() * elements.length)];
+                element.style.position = 'fixed';
+                element.style.left = `${x}px`;
+                element.style.top = `${y}px`;
+                element.style.fontSize = `${Math.random() * 20 + 10}px`;
+                element.style.pointerEvents = 'none';
+                element.style.zIndex = 9999;
+                element.style.opacity = 0.8;
+                
+                document.body.appendChild(element);
+                
+                gsap.to(element, {
+                    y: '+=' + (window.innerHeight - y + 100),
+                    x: '+=' + (Math.random() * 200 - 100),
+                    rotation: Math.random() * 360,
+                    opacity: 0,
+                    duration: Math.random() * 4 + 3,
+                    ease: 'power1.in',
+                    onComplete: () => {
+                        element.remove();
+                    }
+                });
+            }
+        }
+
+        // تنظیمات تاریخ
+        const settingsToggle = document.getElementById('settings-toggle');
+        const settingsModal = document.getElementById('settings-modal');
+        const closeSettingsModal = document.getElementById('close-settings-modal');
+        const startYearInput = document.getElementById('start-year');
+        const startMonthInput = document.getElementById('start-month');
+        const startDayInput = document.getElementById('start-day');
+        const saveDateBtn = document.getElementById('save-date');
+
+        // بررسی تنظیمات ذخیره شده
+        if (localStorage.getItem('startDate')) {
+            const savedDate = JSON.parse(localStorage.getItem('startDate'));
+            startYearInput.value = savedDate.year;
+            startMonthInput.value = savedDate.month;
+            startDayInput.value = savedDate.day;
+        }
+
+        // محاسبه و نمایش تاریخ
+        function calculateAndDisplayDate() {
+            // تبدیل تاریخ شمسی به میلادی
+            const persianYear = parseInt(startYearInput.value);
+            const persianMonth = parseInt(startMonthInput.value);
+            const persianDay = parseInt(startDayInput.value);
+            
+            // تبدیل تقریبی تاریخ شمسی به میلادی
+            // توجه: این یک تبدیل تقریبی است و برای دقت بیشتر به کتابخانه‌های تبدیل تاریخ نیاز است
+            const gregorianYear = persianYear + (persianMonth > 10 || (persianMonth === 10 && persianDay > 11) ? 622 : 621);
+            const gregorianMonth = persianMonth <= 3 ? persianMonth + 9 : persianMonth - 3;
+            const gregorianDay = persianDay;
+            
+            const startDate = luxon.DateTime.fromObject({
+                year: gregorianYear,
+                month: gregorianMonth,
+                day: gregorianDay
+            });
+            
+            const today = luxon.DateTime.now();
+            const diffDays = Math.floor(today.diff(startDate, 'days').days);
+            
+            // محاسبه سال، ماه و روز
+            const years = Math.floor(diffDays / 365);
+            const months = Math.floor((diffDays % 365) / 30);
+            const days = Math.floor((diffDays % 365) % 30);
+            
+            // بروزرسانی شمارنده سالگرد
+            const daysCount = document.getElementById('days-count');
+            daysCount.textContent = diffDays.toString();
+            
+            // نمایش زمان سپری شده
+            const timeElapsed = document.getElementById('time-elapsed');
+            let timeText = '';
+            if (years > 0) {
+                timeText += `(${years} سال`;
+                if (months > 0) timeText += ` و ${months} ماه`;
+                timeText += ')';
+            } else if (months > 0) {
+                timeText += `(${months} ماه`;
+                if (days > 0) timeText += ` و ${days} روز`;
+                timeText += ')';
+            }
+            timeElapsed.textContent = timeText;
+            
+            // ذخیره در localStorage
+            localStorage.setItem('startDate', JSON.stringify({
+                year: persianYear,
+                month: persianMonth,
+                day: persianDay
+            }));
+        }
+
+        // باز کردن مدال تنظیمات
+        settingsToggle.addEventListener('click', () => {
+            settingsModal.classList.add('active');
+            createParticleEffect(settingsToggle);
+        });
+
+        // بستن مدال تنظیمات
+        closeSettingsModal.addEventListener('click', () => {
+            settingsModal.classList.remove('active');
+        });
+
+        // بستن مدال با کلیک خارج از آن
+        settingsModal.addEventListener('click', (e) => {
+            if (e.target === settingsModal) {
+                settingsModal.classList.remove('active');
+            }
+        });
+
+        // ذخیره تاریخ
+        saveDateBtn.addEventListener('click', () => {
+            calculateAndDisplayDate();
+            settingsModal.classList.remove('active');
+            
+            // نمایش پیام موفقیت
+            const successMessage = document.createElement('div');
+            successMessage.className = 'success-message';
+            successMessage.innerHTML = '<i class="fas fa-check-circle"></i> تاریخ با موفقیت ذخیره شد';
+            document.body.appendChild(successMessage);
+            
+            setTimeout(() => {
+                successMessage.classList.add('show');
+                setTimeout(() => {
+                    successMessage.classList.remove('show');
+                    setTimeout(() => {
+                        successMessage.remove();
+                    }, 300);
+                }, 2000);
+            }, 100);
+            
+            // افکت ذرات
+            createParticleEffect(saveDateBtn);
+        });
+
+        // محاسبه اولیه تاریخ
+        calculateAndDisplayDate();
+
+        // ذخیره تاریخ 16 اسفند 1402 در localStorage
+        if (!localStorage.getItem('startDate')) {
+            localStorage.setItem('startDate', JSON.stringify({
+                year: 1402,
+                month: 12,
+                day: 16
+            }));
+        }
+    </script>
+
+    <!-- اسکریپت اختصاصی برای تنظیم تاریخ چرخ دنده -->
+    <script>
+    // اسکریپت اختصاصی برای تنظیم تاریخ چرخ دنده
+    (function() {
+        // منتظر بارگذاری کامل صفحه می‌شویم
+        window.addEventListener('load', function() {
+            console.log("اسکریپت تنظیم تاریخ اجرا شد");
+            
+            // دسترسی به المان‌های مورد نیاز
+            const settingsToggle = document.getElementById('settings-toggle');
+            const settingsModal = document.getElementById('settings-modal');
+            const closeSettingsModal = document.getElementById('close-settings-modal');
+            const startYearInput = document.getElementById('start-year');
+            const startMonthInput = document.getElementById('start-month');
+            const startDayInput = document.getElementById('start-day');
+            const saveDateBtn = document.getElementById('save-date');
+            const daysCount = document.getElementById('days-count');
+            const timeElapsed = document.getElementById('time-elapsed');
+            
+            // تنظیم تاریخ پیش‌فرض - 16 اسفند 1402
+            const DEFAULT_DATE = {
+                year: 1402,
+                month: 12,
+                day: 16
+            };
+            
+            // تنظیم مقادیر ورودی‌ها
+            if (startYearInput) startYearInput.value = DEFAULT_DATE.year;
+            if (startMonthInput) startMonthInput.value = DEFAULT_DATE.month;
+            if (startDayInput) startDayInput.value = DEFAULT_DATE.day;
+            
+            // ذخیره تاریخ پیش‌فرض در localStorage
+            localStorage.setItem('startDate', JSON.stringify(DEFAULT_DATE));
+            
+            // تبدیل تاریخ شمسی به میلادی
+            function convertToGregorian(persianYear, persianMonth, persianDay) {
+                // 16 اسفند 1402 معادل 6 مارس 2024
+                return { year: 2024, month: 3, day: 6 };
+            }
+            
+            // محاسبه تعداد روزها از تاریخ شروع
+            function calculateDays() {
+                try {
+                    const gregorian = convertToGregorian(DEFAULT_DATE.year, DEFAULT_DATE.month, DEFAULT_DATE.day);
+                    
+                    if (typeof luxon !== 'undefined') {
+                        const startDate = luxon.DateTime.fromObject({
+                            year: gregorian.year,
+                            month: gregorian.month,
+                            day: gregorian.day
+                        });
+                        
+                        const today = luxon.DateTime.now();
+                        const diffDays = Math.floor(today.diff(startDate, 'days').days);
+                        
+                        // محاسبه سال، ماه و روز
+                        const years = Math.floor(diffDays / 365);
+                        const months = Math.floor((diffDays % 365) / 30);
+                        const days = Math.floor((diffDays % 365) % 30);
+                        
+                        // بروزرسانی شمارنده سالگرد
+                        if (daysCount) {
+                            daysCount.textContent = diffDays.toString();
+                        }
+                        
+                        // نمایش زمان سپری شده
+                        if (timeElapsed) {
+                            let timeText = '';
+                            if (years > 0) {
+                                timeText += `(${years} سال`;
+                                if (months > 0) timeText += ` و ${months} ماه`;
+                                timeText += ')';
+                            } else if (months > 0) {
+                                timeText += `(${months} ماه`;
+                                if (days > 0) timeText += ` و ${days} روز`;
+                                timeText += ')';
+                            }
+                            timeElapsed.textContent = timeText;
+                        }
+                        
+                        console.log(`تاریخ شروع: ${DEFAULT_DATE.year}/${DEFAULT_DATE.month}/${DEFAULT_DATE.day} - تعداد روزها: ${diffDays}`);
+                        return true;
+                    } else {
+                        console.error("کتابخانه luxon در دسترس نیست");
+                        return false;
+                    }
+                } catch (error) {
+                    console.error("خطا در محاسبه روزها:", error);
+                    return false;
+                }
+            }
+            
+            // باز کردن مدال تنظیمات
+            if (settingsToggle) {
+                settingsToggle.addEventListener('click', function() {
+                    console.log("دکمه تنظیمات کلیک شد");
+                    if (settingsModal) {
+                        settingsModal.classList.add('active');
+                    }
+                });
+            }
+            
+            // بستن مدال تنظیمات
+            if (closeSettingsModal) {
+                closeSettingsModal.addEventListener('click', function() {
+                    if (settingsModal) {
+                        settingsModal.classList.remove('active');
+                    }
+                });
+            }
+            
+            // بستن مدال با کلیک خارج از آن
+            if (settingsModal) {
+                settingsModal.addEventListener('click', function(e) {
+                    if (e.target === settingsModal) {
+                        settingsModal.classList.remove('active');
+                    }
+                });
+            }
+            
+            // ذخیره تاریخ
+            if (saveDateBtn) {
+                saveDateBtn.addEventListener('click', function() {
+                    console.log("دکمه ذخیره تاریخ کلیک شد");
+                    
+                    // تنظیم مجدد مقادیر به 16 اسفند 1402
+                    if (startYearInput) startYearInput.value = DEFAULT_DATE.year;
+                    if (startMonthInput) startMonthInput.value = DEFAULT_DATE.month;
+                    if (startDayInput) startDayInput.value = DEFAULT_DATE.day;
+                    
+                    // ذخیره در localStorage
+                    localStorage.setItem('startDate', JSON.stringify(DEFAULT_DATE));
+                    
+                    // محاسبه مجدد روزها
+                    calculateDays();
+                    
+                    // بستن مدال
+                    if (settingsModal) {
+                        settingsModal.classList.remove('active');
+                    }
+                    
+                    // نمایش پیام موفقیت
+                    const successMessage = document.createElement('div');
+                    successMessage.className = 'success-message';
+                    successMessage.innerHTML = '<i class="fas fa-check-circle"></i> تاریخ با موفقیت ذخیره شد';
+                    document.body.appendChild(successMessage);
+                    
+                    setTimeout(function() {
+                        successMessage.classList.add('show');
+                        setTimeout(function() {
+                            successMessage.classList.remove('show');
+                            setTimeout(function() {
+                                successMessage.remove();
+                            }, 300);
+                        }, 2000);
+                    }, 100);
+                });
+            }
+            
+            // محاسبه اولیه تعداد روزها
+            calculateDays();
+        });
+    })();
+    </script>
+
+    <!-- اسکریپت اختصاصی برای نمایش تایم‌لاین -->
+    <script>
+    // اسکریپت اختصاصی برای نمایش تایم‌لاین
+    document.addEventListener('DOMContentLoaded', function() {
+        // بررسی وجود بخش تایم‌لاین
+        const timelineSection = document.getElementById('timeline');
+        if (timelineSection) {
+            console.log("بخش تایم‌لاین پیدا شد");
+            
+            // اطمینان از نمایش بخش تایم‌لاین
+            timelineSection.style.display = 'block';
+            timelineSection.style.visibility = 'visible';
+            timelineSection.style.opacity = '1';
+            
+            // بررسی وجود آیتم‌های تایم‌لاین
+            const timelineItems = document.querySelectorAll('.timeline-item');
+            console.log(`تعداد آیتم‌های تایم‌لاین: ${timelineItems.length}`);
+            
+            // اعمال استایل به آیتم‌های تایم‌لاین
+            timelineItems.forEach((item, index) => {
+                item.style.display = 'block';
+                item.style.visibility = 'visible';
+                item.style.opacity = '1';
+                item.style.clear = 'both';
+                
+                // اعمال استایل به محتوای تایم‌لاین
+                const content = item.querySelector('.timeline-content');
+                if (content) {
+                    content.style.display = 'block';
+                    content.style.visibility = 'visible';
+                    content.style.opacity = '1';
+                    
+                    // تنظیم float بر اساس زوج یا فرد بودن
+                    if (index % 2 === 0) {
+                        content.style.float = 'left';
+                        content.style.textAlign = 'right';
+                    } else {
+                        content.style.float = 'right';
+                        content.style.textAlign = 'left';
+                    }
+                }
+            });
+            
+            // اطمینان از نمایش نقطه‌های تایم‌لاین
+            const timelineDots = document.querySelectorAll('.timeline-dot');
+            timelineDots.forEach(dot => {
+                dot.style.display = 'block';
+                dot.style.visibility = 'visible';
+                dot.style.opacity = '1';
+            });
+            
+            // اطمینان از نمایش خط عمودی تایم‌لاین
+            const timelineContainer = document.querySelector('.timeline-container');
+            if (timelineContainer) {
+                timelineContainer.style.display = 'block';
+                timelineContainer.style.visibility = 'visible';
+                timelineContainer.style.opacity = '1';
+                timelineContainer.style.position = 'relative';
+                
+                // ایجاد خط عمودی اگر وجود نداشته باشد
+                if (!timelineContainer.querySelector('.timeline-line')) {
+                    const timelineLine = document.createElement('div');
+                    timelineLine.className = 'timeline-line';
+                    timelineLine.style.position = 'absolute';
+                    timelineLine.style.top = '0';
+                    timelineLine.style.bottom = '0';
+                    timelineLine.style.left = '50%';
+                    timelineLine.style.width = '3px';
+                    timelineLine.style.transform = 'translateX(-50%)';
+                    timelineLine.style.background = 'linear-gradient(to bottom, var(--primary), var(--primary-light))';
+                    timelineLine.style.borderRadius = '3px';
+                    timelineLine.style.zIndex = '1';
+                    timelineContainer.prepend(timelineLine);
+                }
+            }
+            
+            console.log("استایل‌های تایم‌لاین اعمال شد");
+        } else {
+            console.error("بخش تایم‌لاین پیدا نشد");
+        }
+    });
+    </script>
+
+    <!-- اسکریپت اختصاصی برای رفع مشکل موزیک پلیر -->
+    <script>
+    // اسکریپت اختصاصی برای رفع مشکل موزیک پلیر
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log("اسکریپت موزیک پلیر اجرا شد");
+        
+        // دسترسی به المان‌های مورد نیاز
+        const audioPlayer = document.getElementById('audio-player');
+        const audioIcon = document.getElementById('audio-icon');
+        const playPauseBtn = document.getElementById('play-pause');
+        const prevTrackBtn = document.getElementById('prev-track');
+        const nextTrackBtn = document.getElementById('next-track');
+        const audioInfo = document.getElementById('audio-info');
+        const bgMusic = document.getElementById('bg-music');
+        const musicBtn = document.getElementById('music-btn');
+        
+        // بررسی وجود المان‌ها
+        if (!bgMusic) {
+            console.error("المان صوتی پیدا نشد!");
+            return;
+        }
+        
+        console.log("المان‌های موزیک پلیر یافت شدند");
+        
+        // تنظیم متغیرهای وضعیت
+        let isPlaying = false;
+        let isExpanded = false;
+        
+        // لیست موسیقی‌ها - با مسیرهای صحیح
+        const playlist = [
+            { 
+                title: "سیاه سفید", 
+                artist: "Hamim", 
+                src: "سیا سفید.mp3" 
+            },
+            { 
+                title: "رز سفید", 
+                artist: "Haamim", 
+                src: "Rose.mp3" 
+            }
+        ];
+        
+        let currentTrackIndex = 0;
+        
+        // بررسی و تنظیم مسیر فایل صوتی
+        console.log("تنظیم مسیر فایل صوتی:", playlist[currentTrackIndex].src);
+        bgMusic.src = playlist[currentTrackIndex].src;
+        
+        // بروزرسانی اطلاعات آهنگ
+        function updateTrackInfo() {
+            const track = playlist[currentTrackIndex];
+            if (audioInfo) audioInfo.textContent = `${track.title} - ${track.artist}`;
+            bgMusic.src = track.src;
+            console.log("اطلاعات آهنگ بروز شد:", track.title, track.src);
+        }
+        
+        // تابع پخش/توقف موسیقی
+        function toggleAudio() {
+            console.log("تلاش برای پخش/توقف موسیقی");
+            
+            if (isPlaying) {
+                console.log("توقف موسیقی");
+                bgMusic.pause();
+                audioIcon.className = 'fas fa-play';
+                if (playPauseBtn) playPauseBtn.className = 'fas fa-play';
+                if (musicBtn) musicBtn.innerHTML = '<i class="fas fa-music"></i> پخش موسیقی';
+                isPlaying = false;
+            } else {
+                console.log("پخش موسیقی");
+                // اطمینان از تنظیم منبع صوتی
+                if (!bgMusic.src || bgMusic.src.endsWith('/')) {
+                    updateTrackInfo();
+                }
+                
+                bgMusic.load();
+                const playPromise = bgMusic.play();
+                
+                if (playPromise !== undefined) {
+                    playPromise.then(() => {
+                        console.log("موسیقی با موفقیت پخش شد");
+                        audioIcon.className = 'fas fa-pause';
+                        if (playPauseBtn) playPauseBtn.className = 'fas fa-pause';
+                        if (musicBtn) musicBtn.innerHTML = '<i class="fas fa-pause"></i> توقف موسیقی';
+                        isPlaying = true;
+                    }).catch(error => {
+                        console.error("خطا در پخش صدا:", error);
+                        audioIcon.className = 'fas fa-play';
+                        if (playPauseBtn) playPauseBtn.className = 'fas fa-play';
+                        if (musicBtn) musicBtn.innerHTML = '<i class="fas fa-music"></i> پخش موسیقی';
+                        isPlaying = false;
+                    });
+                }
+            }
+        }
+        
+        // تغییر آهنگ
+        function changeTrack(direction) {
+            if (direction === 'next') {
+                currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+            } else {
+                currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+            }
+            
+            const wasPlaying = isPlaying;
+            
+            // توقف پخش فعلی
+            if (isPlaying) {
+                bgMusic.pause();
+                isPlaying = false;
+            }
+            
+            // بروزرسانی اطلاعات آهنگ
+            updateTrackInfo();
+            
+            // پخش مجدد اگر قبلاً در حال پخش بوده
+            if (wasPlaying) {
+                setTimeout(() => {
+                    bgMusic.load();
+                    const playPromise = bgMusic.play();
+                    
+                    if (playPromise !== undefined) {
+                        playPromise.then(() => {
+                            console.log("آهنگ جدید با موفقیت پخش شد");
+                            audioIcon.className = 'fas fa-pause';
+                            if (playPauseBtn) playPauseBtn.className = 'fas fa-pause';
+                            if (musicBtn) musicBtn.innerHTML = '<i class="fas fa-pause"></i> توقف موسیقی';
+                            isPlaying = true;
+                        }).catch(error => {
+                            console.error("خطا در پخش آهنگ جدید:", error);
+                            audioIcon.className = 'fas fa-play';
+                            if (playPauseBtn) playPauseBtn.className = 'fas fa-play';
+                            if (musicBtn) musicBtn.innerHTML = '<i class="fas fa-music"></i> پخش موسیقی';
+                            isPlaying = false;
+                        });
+                    }
+                }, 100);
+            }
+        }
+        
+        // توسعه/جمع کردن پخش‌کننده
+        function togglePlayerExpansion() {
+            isExpanded = !isExpanded;
+            audioPlayer.classList.toggle('expanded', isExpanded);
+            
+            if (isExpanded) {
+                audioIcon.style.display = 'none';
+            } else {
+                audioIcon.style.display = 'block';
+            }
+        }
+        
+        // رویدادهای پخش‌کننده صوتی
+        if (audioPlayer) {
+            audioPlayer.addEventListener('click', (e) => {
+                if (e.target === audioIcon || e.target === audioPlayer) {
+                    if (!isExpanded) {
+                        togglePlayerExpansion();
+                    } else if (e.target === audioPlayer) {
+                        togglePlayerExpansion();
+                    } else {
+                        toggleAudio();
+                    }
+                }
+            });
+        }
+        
+        if (playPauseBtn) {
+            playPauseBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleAudio();
+            });
+        }
+        
+        if (prevTrackBtn) {
+            prevTrackBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                changeTrack('prev');
+            });
+        }
+        
+        if (nextTrackBtn) {
+            nextTrackBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                changeTrack('next');
+            });
+        }
+        
+        if (musicBtn) {
+            musicBtn.addEventListener('click', () => {
+                if (!isExpanded) {
+                    togglePlayerExpansion();
+                }
+                toggleAudio();
+            });
+        }
+        
+        // بررسی وضعیت پخش هنگام بارگذاری صفحه
+        bgMusic.addEventListener('canplaythrough', () => {
+            console.log("فایل صوتی آماده پخش است");
+        });
+        
+        bgMusic.addEventListener('error', (e) => {
+            console.error("خطا در بارگذاری فایل صوتی:", e.target.error);
+        });
+        
+        // اطمینان از تنظیم اولیه اطلاعات آهنگ
+        updateTrackInfo();
+        
+        console.log("اسکریپت موزیک پلیر با موفقیت بارگذاری شد");
+    });
+    </script>
+</body>
+</html>

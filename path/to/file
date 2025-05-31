@@ -1,0 +1,50 @@
+// لیست موسیقی‌ها - با مسیرهای صحیح
+const playlist = [
+    { 
+        title: "سیاه سفید", 
+        artist: "Hamim", 
+        src: "سیا سفید.mp3" 
+    },
+    { 
+        title: "رز سفید", 
+        artist: "Haamim", 
+        src: "Rose.mp3" 
+    }
+]; 
+
+<audio id="bg-music" preload="auto">
+    <source src="" type="audio/mpeg">
+    مرورگر شما از عنصر صدا پشتیبانی نمی‌کند.
+</audio> 
+
+// تغییر آهنگ
+function changeTrack(direction) {
+    if (direction === 'next') {
+        currentTrackIndex = (currentTrackIndex + 1) % playlist.length;
+    } else {
+        currentTrackIndex = (currentTrackIndex - 1 + playlist.length) % playlist.length;
+    }
+    
+    const track = playlist[currentTrackIndex];
+    console.log("تغییر آهنگ به:", track.title, "- مسیر:", track.src);
+    
+    bgMusic.src = track.src;
+    if (audioInfo) audioInfo.textContent = `${track.title} - ${track.artist}`;
+    
+    // اگر در حال پخش بود، آهنگ جدید را پخش کن
+    if (isPlaying) {
+        bgMusic.pause();
+        bgMusic.load();
+        const playPromise = bgMusic.play();
+        
+        if (playPromise !== undefined) {
+            playPromise.catch(error => {
+                console.error("خطا در پخش آهنگ جدید:", error);
+                isPlaying = false;
+                audioIcon.className = 'fas fa-play';
+                if (playPauseBtn) playPauseBtn.className = 'fas fa-play';
+                if (musicBtn) musicBtn.innerHTML = '<i class="fas fa-music"></i> پخش موسیقی';
+            });
+        }
+    }
+} 
